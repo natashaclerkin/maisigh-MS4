@@ -1,6 +1,6 @@
 # Maisigh.ie
 
-## Code Institute MS4 Project in Full Stack Frameworks with Django
+## Code Institute MS4 Project in Full Stack Frameworks
 The brief was to build a full-stack site based around business logic used to control a centrally-owned dataset. The requirements included the set up of an authentication mechanism and to provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 
 # Contents
@@ -25,7 +25,7 @@ The brief was to build a full-stack site based around business logic used to con
 
 [View website](http://maisigh-ms4.herokuapp.com) 
  
-[Maisigh.ie](http://maisigh-ms4.herokuapp.com) is a fictional Ecommerce site that allows users to locate sustainable, Irish accessories. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
+[Maisigh.ie](http://maisigh-ms4.herokuapp.com) is a fictional Ecommerce site that allows users to locate sustainable, Irish accessories. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
 
 Maisigh knows that simply having a good product is no longer enough to win a customer’s heart. They now want more than just quality, and demand products that align with their personal values. 
 In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Maisigh is fully committed to providing Irish handcrafted accessories with minimal impact on the environment. Enter Maisigh. Customers will adore the selection of fashion-forward, ethically-sourced products that they will fall in love with.
@@ -94,7 +94,7 @@ As a business/admin user, I would like to have access to all of the above as wel
 - Ensure intuitive text is present so that I can provide an enjoyable user experience when users interact with the content or features.
 - View the Maisigh logo in as many locations on the website so that I can create awareness for the brand.
 - Offer a discount to first time customers so that I can gain repeat customers for the brand. 
-- View analytics/reports for the checkout process so that I can highlight and fix any potential cart abandonment issues relating to the design and make necessary improvements  
+- View analytics/reports for the checkout process so that I can highlight and fix any potential cart abandonment issues relating to the design and make necessary improvements.  
 
 
 ## Design
@@ -119,7 +119,7 @@ I ended up creating and using the below palette once it had passed rigorous Acce
 
 ## Wireframes
 
-This folder contains [Wireframes](wireframes/wireframes.pdf "Maisigh Wireframes") including XXXXXXX pages designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](https://res.cloudinary.com/nclerkin/image.png "Maisigh Sitemap") and data [schema](https://res.cloudinary.com/nclerkin/image.png "Maisigh Schema").
+This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") including homepage, category, individual product and checkout pages designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](https://res.cloudinary.com/nclerkin/image/upload/v1625089596/sitemap_qccb7z.png "Maisigh Sitemap") and data [schema](https://res.cloudinary.com/nclerkin/image/upload/v1625089596/schema_odygsg.png "Maisigh Schema").
 **Please note the finalised project contains slight variations to the original wireframes**
 
 [^ Back To Top ](#contents)
@@ -139,7 +139,7 @@ COMPLETE FEATURES LEFT TO IMPLEMENT
 
 # Information Architecture
 
-![Maisigh Sitemap](https://res.cloudinary.com/nclerkin/image.png "Maisigh Sitemap")
+![Maisigh Schema](https://res.cloudinary.com/nclerkin/image.png "Maisigh Schema")
 
 
 ## Database Choice
@@ -186,7 +186,8 @@ COLLECTIONS
 - [Heroku PostgreSQL](https://elements.heroku.com/addons/heroku-postgresql)
 - [AWS S3 Basket](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3.html)
 - [Cloudinary](https://cloudinary.com/)
-- [Autoprefixer](https://autoprefixer.github.io/)  
+- [Autoprefixer](https://autoprefixer.github.io/) 
+- [DrawSQL](https://drawsql.app/) 
 - [Freeformatter CSS Beautify](https://www.freeformatter.com/css-beautifier.html)  
 - [Freeformatter HTML Formatter](https://www.freeformatter.com/html-formatter.html) 
 - [Freeformatter JS Formatter](https://www.freeformatter.com/javascript-beautifier.html)     
