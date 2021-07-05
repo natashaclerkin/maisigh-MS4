@@ -1,7 +1,5 @@
 html,
 body {
-    background: url('/media/homepage-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
     background-color: #F9F9F9;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
@@ -98,6 +96,35 @@ header {
 .dropdown-menu a:active {
     background-color: #f8f9fa;
     color: #7b7c7c;
+}
+
+
+/* CAROUSEL SECTION */
+
+
+/* Carousel caption */
+
+.carousel-caption {
+	top: 45%;
+}
+
+
+.carousel-caption h1{
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+/* Carousel CTA */
+
+.homecta {
+	margin-top: 30px;
+}
+
+
+.carousel-black img {
+	-webkit-filter: brightness(95%) saturate(50%);
+	filter: brightness(95%) saturate(50%);
 }
 
 
