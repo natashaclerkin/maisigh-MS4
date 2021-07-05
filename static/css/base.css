@@ -1,13 +1,11 @@
-html {
-    height: 100%;
-}
-
+html,
 body {
     background: url('/media/homepage-bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
+    background-color: #F9F9F9;
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* from Bulma */
@@ -19,9 +17,19 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
+
+.navbar-brand {
     text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 26px;
 }
+
+.nav-font {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
 
 .main-logo-link {
     width: fit-content;
@@ -56,6 +64,43 @@ body {
     border: 1px solid black !important;
 }
 
+
+.delivery-container {
+    background-color: #2C2C2C;
+    color: #F9F9F9;
+}
+
+#delivery-banner {
+    background: #f3e2eb !important;
+}
+
+.my-account-mobile {
+    display: none;
+}
+
+.search-mobile {
+    display: block;
+    }
+
+header {
+    background-color: #f8f9fa;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa;
+    font-size: inherit;
+}
+
+.dropdown-menu a {
+    color: #7b7c7c;
+}
+
+.dropdown-menu a:active {
+    background-color: #f8f9fa;
+    color: #7b7c7c;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -78,3 +123,88 @@ body {
     .header-container {
         padding-top: 164px;
     }
+} 
+
+@media only screen and (max-width: 1200px) {
+    .navbar {
+        margin: 16px 75px;;
+        padding: 0px;
+    }
+    
+    .navbar-toggler {
+        font-size: 1rem;
+    }
+    
+    .nav-item-list {
+        text-align: left;
+        padding: 40px 0px;
+        max-width: 100%;
+        }
+    
+    .nav-item-list li {
+        padding: 5px 0px;
+        font-size: 18px;
+        }
+    
+    .navbar-brand {
+        letter-spacing: 3.5px;
+        font-size: 20px;
+        }
+    
+    .bag-icon i {
+        font-size: 1rem;
+    }
+
+    .bag-container {
+        margin-top: 150px;
+    }
+
+    .my-account {
+        display: none;
+        }
+    
+    /*.search-desktop {
+            display: none;
+            }
+    */
+            
+    .search-mobile {
+            display: block;
+            }
+
+    .my-account-mobile {
+        display: block;
+        }
+    }
+
+    
+
+    @media only screen and (max-width: 768px) {
+        
+        .navbar {
+            margin: 16px;
+            padding: 0px;
+        }
+        
+        .navbar-brand-col {
+            width: auto;
+        }
+        
+        .toggler-col {
+            width: auto;
+            padding: 0;
+        }
+        
+        .bag-container {
+            margin-top: 50px;
+            }
+        }
+        
+        
+    @media only screen and (max-width: 600px) {
+        
+        .navbar-brand {
+            letter-spacing: 3px;
+            font-size: 16px;
+            }
+        }
