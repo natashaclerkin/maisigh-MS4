@@ -239,9 +239,36 @@ I took inspiration from the following sources however I did implement my own cus
 
 
 ## Content and Media
-The Maisigh logo and main content for the site were created by myself XXXXXXXXXXXXXXXXXXXXXXX
- 
-CREDITS
+The main content for the site was created by myself & XXXXXXXXXXXXXXXXXXXXXXX
+
+Site Imagery was sourced from the following sources:
+
+### Slider
+- Slider image #1 - [Louella Jewellery](https://www.facebook.com/louellajewellery/photos/a.456107394444679/3097406220314770)
+- Slider image #2 - [Pexels](https://www.pexels.com/photo/person-in-white-long-sleeve-shirt-holding-gold-leather-handbag-5705495)
+- Slider image #3 - [Glamour](https://media.glamour.com/photos/5f5af8bc11435a3061457904/master/w_2560%2Cc_limit/sustainable%252520jewelry%252520brands.jpg)
+
+### Inventory
+- Gold Necklace #1 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-cz-bar-yellow-gold-necklace-lw-n011-y)
+- Gold Necklace #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-18ct-gold-lab-diamond-necklace-lw-n070-18ct-gold)
+- Rose Gold Necklace #1 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/pre-order-lilywho-zig-zag-bar-rose-gold-necklace-lw-n025-r)
+- Rose Gold Necklace #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-rose-gold-necklace-lw-n003-r)
+- Silver Necklace #1 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-two-ring-silver-necklace-lw-n001-s)
+- Silver Necklace #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-horseshoe-silver-necklace)
+- Gold Bracelet #1 - [Lilywho](https://lilywho.ie/products/lilywho-id-yellow-gold-bracelet-lw-b006-y)
+- Gold Bracelet #2 - [Lilywho](https://seoidin.com/collections/bracelets/products/classic-gold-double-circles-bracelet)
+- Silver Bracelet #1 - [Lilywho](https://lilywho.ie/products/lilywho-id-silver-bracelet-lw-b006-s)
+- Silver Bracelet #2 - [Lilywho](https://lilywho.ie/products/lilywho-tennis-bracelet-lw-b011-s)
+- Rose Gold Bracelet #1 - [Lilywho](https://seoidin.com/collections/bracelets/products/pearl-bracelet-2)
+- Rose Gold Bracelet #2 - [Lilywho](https://seoidin.com/products/three-tone-rose-gold-bracelet?_pos=1&_sid=73bc81ace&_ss=r)
+- Gold Earrings #1 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-rectangle-mini-hoop-yellow-gold-earrings-lw-e086-y)
+- Gold Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-cz-mini-bar-yellow-gold-earrings-lw-e034-y)
+- Silver Earrings #1 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-silver-earrings-lw-e003-s)
+- Silver Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-silver-earrings-lw-e011-s)
+- Rose Gold Earrings #1 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lisa-jordan-x-lilywho-small-twist-hoop-rose-gold-earrings-lw-e080-r)
+- Rose Gold Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-spike-hoop-rose-gold-earrings-lw-e038-r)
+
+
 
 ## Acknowledgements
 
