@@ -72,7 +72,7 @@
                     <ul class="navbar-nav nav-font justify-content-start">
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Collections <!-- caret align <i class="nav-link fas fa-caret-down fa-lg ml-3"></i> -->
+                                Collection <!-- caret align <i class="nav-link fas fa-caret-down fa-lg ml-3"></i> -->
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                                 <a href="" class="dropdown-item">By Price</a>
@@ -169,7 +169,7 @@
                             <p class="d-none d-xl-block">Search</p>
                         </a>
                         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="searchdesktop">
-                            <form class="form" method="GET" action="">
+                            <form class="form" method="GET" action="{% url 'products' %}">   
                                 <div class="input-group w-100">
                                     <input class="form-control border border-black rounded-0" type="text" name="q"
                                         placeholder="Search Maisigh">
