@@ -265,9 +265,8 @@ Site Imagery was sourced from the following sources:
 - Gold Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-cz-mini-bar-yellow-gold-earrings-lw-e034-y)
 - Silver Earrings #1 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-silver-earrings-lw-e003-s)
 - Silver Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-silver-earrings-lw-e011-s)
-- Rose Gold Earrings #1 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lisa-jordan-x-lilywho-small-twist-hoop-rose-gold-earrings-lw-e080-r)
+- Rose Gold Earrings #1 - [Lilywho](https://lilywho.ie/products/lilywho-thick-stone-hoop-rose-gold-gold-earrings-lw-e028-r)
 - Rose Gold Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-spike-hoop-rose-gold-earrings-lw-e038-r)
-
 
 
 ## Acknowledgements
