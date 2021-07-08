@@ -1,6 +1,5 @@
 html,
 body {
-    background-color: #F9F9F9;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     overflow-x: hidden;
@@ -65,7 +64,7 @@ body {
 
 .delivery-container {
     background-color: #2C2C2C;
-    color: #F9F9F9;
+    color: #ffffff;
 }
 
 #delivery-banner {
@@ -81,11 +80,11 @@ body {
     }
 
 header {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
 }
 
 .dropdown-menu {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     font-size: inherit;
 }
 
@@ -94,7 +93,7 @@ header {
 }
 
 .dropdown-menu a:active {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     color: #7b7c7c;
 }
 
