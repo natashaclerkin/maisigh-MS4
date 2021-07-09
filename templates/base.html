@@ -70,16 +70,8 @@
                 <!-- Main Nav Items -->
                 <div class="col-4 collapse navbar-collapse nav-item-list" id="navbarTogglerDemo01">
                     <ul class="navbar-nav nav-font justify-content-start">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Collection <!-- caret align <i class="nav-link fas fa-caret-down fa-lg ml-3"></i> -->
-                            </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                                <a href="" class="dropdown-item">By Price</a>
-                                <a href="" class="dropdown-item ">By Rating</a>
-                                <a href="" class="dropdown-item ">By Category</a>
-                                <a href="{% url 'products' %}?category=Necklaces,Bracelets,Earrings"  class="dropdown-item">All Jewellery</a>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-label="Collection" href="{% url 'products' %}">Collection</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-label="Necklaces" href="{% url 'products' %}?category=Necklaces">Necklaces</a>
