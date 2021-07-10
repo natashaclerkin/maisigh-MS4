@@ -186,6 +186,9 @@ header {
     color: white !important;
 }
 
+.bag-text{
+    color: #b8e0d2; 
+}
 
 /* -------------------------------- Media Queries */
 
@@ -244,6 +247,7 @@ header {
     .bag-container {
         margin-top: 150px;
     }
+
 
     .my-account {
         display: none;
