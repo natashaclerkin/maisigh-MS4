@@ -20,32 +20,11 @@
                 </div>
             </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="breadcrumbs col-sm-6">
-                        <p class="breadcrumbs-text">
-                            <a href="{% url 'home' %}" class="breadcrumb-link">Home</a>
-                            |
-                            <a href="{% url 'products' %}" class="breadcrumb-link">Collection</a>
-                            |
-                            <!-- category breadcrumb -->
-                            {% if current_categories %}
-                            {% for category in current_categories %}
-                            <span class="active-breadcrumb">{{ category.friendly_name }} ({{ products|length}})</span>
-                            {% endfor %}
-                            <!-- search query breadcrumb -->
-                            {% elif search_term %}
-                            <span class="active-breadcrumb">Results for the search term: {{ search_term|truncatechars:25 }}
-                                ({{ products|length}})</span>
-                            <!-- product tag breadcrumb -->
-                            {% elif product_tag %}
-                            <span class="active-breadcrumb">{{ product_tag }} products ({{ products|length}})</span>
-                            {% else %}
-                            <span class="active-breadcrumb">All products ({{ products|length}})</span>
-                            {% endif %}
-                        </p>
-                    </div>
-            <div class="col-6 col-md-4 col-xl-3 offset-6 offset-md-8 offset-xl-9 p-1">
+            <div class="row">
+                <div class="product-container col-10 offset-1">
+                    <div class="row mt-1 mb-2">
+                        <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                            <div class="sort-select-wrapper w-50">
                 <select id="sort-selector"
                     class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -64,14 +43,32 @@
                 </select>
             </div>
         </div>
-    </div>
-</div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left breadcrumbs">
+                            <a href="{% url 'home' %}" class="breadcrumb-link">Home</a>
+                            |
+                            <a href="{% url 'products' %}" class="breadcrumb-link">Collection</a>
+                            |
+                            <!-- category breadcrumb -->
+                            {% if current_categories %}
+                            {% for category in current_categories %}
+                            <span class="active-breadcrumb">{{ category.friendly_name }} ({{ products|length}})</span>
+                            {% endfor %}
+                            <!-- search query breadcrumb -->
+                            {% elif search_term %}
+                            <span class="active-breadcrumb">Results for "{{ search_term|truncatechars:25 }}"
+                                ({{ products|length}})</span>
+                            <!-- product tag breadcrumb -->
+                            {% elif product_tag %}
+                            <span class="active-breadcrumb">{{ product_tag }} products ({{ products|length}})</span>
+                            {% else %}
+                            <span class="active-breadcrumb">All products ({{ products|length}})</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
 
-
-
-            <div class="row">
-                <div class="product-container col-10 offset-1">
-                    <div class="row mt-1 mb-2"></div>
+                    
                     <div class="row">
                         {% for product in products %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">

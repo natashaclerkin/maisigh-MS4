@@ -152,7 +152,7 @@ header {
 }
 
 .active-breadcrumb {
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .breadcrumbs-text {
