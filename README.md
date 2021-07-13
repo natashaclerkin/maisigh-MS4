@@ -268,6 +268,9 @@ Site Imagery was sourced from the following sources:
 - Rose Gold Earrings #1 - [Lilywho](https://lilywho.ie/products/lilywho-thick-stone-hoop-rose-gold-gold-earrings-lw-e028-r)
 - Rose Gold Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-spike-hoop-rose-gold-earrings-lw-e038-r)
 
+### Miscellaneous
+- No Image - [Deposit Photos](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdepositphotos.com%2Fvector-images%2Fno-image-available.html&psig=AOvVaw3ke_Ec4FTVWrR29aMEdVJ_&ust=1626273444230000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCNjxifWi4PECFQAAAAAdAAAAABAJ)
+
 
 ## Acknowledgements
 
