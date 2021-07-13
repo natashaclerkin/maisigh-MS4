@@ -95,8 +95,7 @@
                             <div class="dropdown-menu border-0" aria-labelledby="myaccount">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                <a href="" aria-label="Add a Product" class="dropdown-item">Add a
-                                    Product</a>
+                                <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" aria-label="Log out"
@@ -189,8 +188,7 @@
                         <div class="dropdown-menu border-0" aria-labelledby="myaccount">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="" aria-label="Add a Product" class="dropdown-item">Add a
-                                Product</a>
+                            <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item">Product Management</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" aria-label="Logout" class="dropdown-item">Logout</a>
