@@ -248,6 +248,51 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+
+
+/* Footer */
+
+footer {
+    background-color: #000;
+    margin-bottom: -20px;
+}
+
+footer a{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+footer a:hover{
+    color: #f6c5df;
+}
+
+
+.social-links .fab:hover {
+	color: #f6c5df;
+}
+
+a:link{
+    text-decoration: none!important;
+  }
+
+.brand-footer {
+    background-color: #b8e0d2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000000;
+}
+
+.social-links li i {
+    color: #ffffff;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.copyright{
+    background-color: #000000;
+    color: #b8e0d2;
+}
 /* ------------------------------- Bootstrap toasts */
 
 .message-container {

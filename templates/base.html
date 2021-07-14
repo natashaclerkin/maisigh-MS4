@@ -59,7 +59,7 @@
         </div>
 
         <!-- Nav bar -->
-        <nav class="navbar navbar-expand-xl navbar-light bg-white">
+        <nav class="navbar navbar-expand-xl fixed-top navbar-light bg-white">
             <!-- Toggler Button -->
             <div class="col-md-4 toggler-col">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
@@ -74,13 +74,13 @@
                             <a class="nav-link" aria-label="Collection" href="{% url 'products' %}">Collection</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Necklaces" href="{% url 'products' %}?category=Necklaces">Necklaces</a>
+                            <a class="nav-link" aria-label="Necklaces" href="{% url 'products' %}?category=necklaces">Necklaces</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Bracelets" href="{% url 'products' %}?category=Bracelets">Bracelets</a>
+                            <a class="nav-link" aria-label="Bracelets" href="{% url 'products' %}?category=bracelets">Bracelets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Earrings" href="{% url 'products' %}?category=Earrings">Earrings</a>
+                            <a class="nav-link" aria-label="Earrings" href="{% url 'products' %}?category=earrings">Earrings</a>
                         </li>
                         <!-- My account & search section mobile -->
                         <li class="nav-item dropdown my-account-mobile nav-font">
@@ -237,11 +237,70 @@
     </div>
     {% endif %}
 
+
+
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
+
+
+
+    
+        
+		<div class="container-fluid brand-footer text-center">
+			
+                <div class="maisigh-icons row justify-content-md-center">
+                    <div class="col col-sm-8 col-md-2">               
+                            <i class="fas fa-recycle"></i>
+                          ECO-FRIENDLY
+                  </div>
+                  <div class="col col-sm-8 col-md-2">
+                    <i class="fas fa-flag"></i>
+                         PROUDLY IRISH   
+                  </div>
+                  <div class="col col-sm-8 col-md-2">
+                    <i class="fas fa-shipping-fast"></i>
+                         FREE SHIPPING
+                  </div>
+                </div>
+		</div>
+
+
+            <!-- Footer -->
+    <footer class="text-center mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4 text-sm-start">
+                    <ul class="text-uppercase list-unstyled mt-2">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                </div>
+                <div class="col-12 col-lg-4">
+                    <ul class="social-links list-inline mt-3">
+                        <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li class="list-inline-item me-4"><a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i class="fab fa-facebook fa-2x"></i></a></li>
+                        <li class="list-inline-item me-4"><a href="https://twitter.com/" target="_blank" rel="noreferrer"><i class="fab fa-twitter fa-2x"></i></a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid text-center">
+        <div class="row copyright">
+            <div class="col-12">
+                <p class="m-0"><small>Copyright © 2021 Maisigh</small></p>
+            </div>
+        </div>
+    </div>
 
     {% block postloadjs %}
     <script type="text/javascript">
