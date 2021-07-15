@@ -23,8 +23,7 @@ class Review(models.Model):
         ("4", '4'),
         ("5", '5'),
     )
-    review_rating = models.CharField(
-        max_length=10, choices=rating_figures, default="3")
+    review_rating = models.IntegerField(default=3)
     review_title = models.CharField(max_length=254)
     review_content = models.TextField(
         max_length=1000, null=False, blank=False, default='')
@@ -36,5 +35,4 @@ class Review(models.Model):
         return self.review_title
 
     def save(self, *args, **kwargs):
-        self.product.calculate_rating()
         super().save(*args, **kwargs)

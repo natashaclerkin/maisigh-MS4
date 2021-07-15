@@ -11,7 +11,6 @@
 
 {% block content %}
 
-    <div class="overlay"></div>
     <!-- Breadcrumbs-->
 <div class="container">
     <div class="row shop-top-row">
@@ -108,6 +107,32 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <a href="{% url 'add_review' product.id %}" class="text-black">Add Review<i class="fas fa-plus"></i></a>
+                <p>
+                    <a class="btn btn-black rounded-0" data-toggle="collapse" href="#collapseReview" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="text-uppercase">Read Reviews</span>
+                    </a>
+                </p>
+                <div class="collapse" id="collapseReview">
+                        {% if product.reviews.count > 0 %}
+                            {% for review in product.reviews.all %}
+                            <div class="card card-body mb-2">
+                                <h5 class="card-title">{{ review.review_title }}</h5>
+                                <p><small class="text-muted">{{ review.review_rating }} / 5 <i class="fas fa-star"></i></small></p>
+                                <p class="card-text">{{ review.review_content }}</p>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                        <div class="card card-body mb-2">
+                            <h5 class="card-title">This product does not have any reviews at the moment. </h5>
+                            <p class="card-text">Already purchased this Maisigh piece? Let us know what you think! :)</p>
+                    </div>
+                        {% endif %}
                 </div>
             </div>
         </div>
