@@ -11,7 +11,7 @@ class Wishlist(models.Model):
         UserProfile, null=False, blank=False,
         on_delete=models.CASCADE, related_name='wishlist')
     products = models.ManyToManyField(
-        Product, null=True, through='WishlistItem')
+        Product, default="", through='WishlistItem')
 
     def __str__(self):
         return f'Wishlist ({self.user})'

@@ -98,15 +98,14 @@
                                 <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" aria-label="Log out"
-                                    class="dropdown-item">Logout</a>
+                                <a href="{% url 'wishlist' %}" aria-label="Wish List" class="dropdown-item">Wish List</a>
+                                <a href="{% url 'account_logout' %}" aria-label="Log out" class="dropdown-item">Logout</a>
                                 {% else %}
                                 <a href="{% url 'account_signup' %}" aria-label="Register"
                                     class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" aria-label="Login" class="dropdown-item">Login</a>
                                 {% endif %}
                             </div>
-                        </li>
                         <!-- Search 
                         <li class="nav-item dropdown search-mobile nav-font">
                             <a class="nav-link" href="#" id="searchmobile" data-toggle="dropdown" aria-haspopup="true"
@@ -191,6 +190,7 @@
                             <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item">Product Management</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'wishlist' %}" aria-label="Wish List" class="dropdown-item">Wish List</a>
                             <a href="{% url 'account_logout' %}" aria-label="Logout" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" aria-label="Register"
