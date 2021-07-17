@@ -25,7 +25,7 @@ The brief was to build a full-stack site based around business logic used to con
 
 [View website](http://maisigh-ms4.herokuapp.com) 
  
-[Maisigh.ie](http://maisigh-ms4.herokuapp.com) is a fictional Ecommerce site that allows users to locate sustainable, Irish accessories. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
+[Maisigh.ie](http://maisigh-ms4.herokuapp.com) is a fictional Ecommerce site that allows users to locate sustainable, Irish jewellery. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
 
 Maisigh knows that simply having a good product is no longer enough to win a customer’s heart. They now want more than just quality, and demand products that align with their personal values. 
 In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Maisigh is fully committed to providing Irish handcrafted accessories with minimal impact on the environment. Enter Maisigh. Customers will adore the selection of fashion-forward, ethically-sourced products that they will fall in love with.
@@ -239,7 +239,7 @@ I took inspiration from the following sources however I did implement my own cus
 
 
 ## Content and Media
-The main content for the site was created by myself & XXXXXXXXXXXXXXXXXXXXXXX
+The main content for the site was created by myself and the About and Product Detail content were adapted from [Lilywho.](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-cz-bar-yellow-gold-necklace-lw-n011-y)
 
 Site Imagery was sourced from the following sources:
 

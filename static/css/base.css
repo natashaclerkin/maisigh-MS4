@@ -201,6 +201,11 @@ header {
         font-size: 25px;
 }
 
+
+.about-image{
+width: inherit;
+}
+
 /*------ Back to top------*/
 .btt-button {
     height: 42px;
