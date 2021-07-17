@@ -16,15 +16,15 @@
     <div class="row shop-top-row">
         <div class="col-12">
             <div class="breadcrumbs">
-                <p class="breadcrumbs-text">
+                <p>
                     <a href="{% url 'home' %}" class="breadcrumb-link">Home</a>
-                    |
+                    <span class="bar-pink">|</span>
                     <a href="{% url 'products' %}" class="breadcrumb-link">Collection</a>
-                    |
+                    <span class="bar-pink">|</span>
                     <a href="{% url 'products' %}?category={{ product.category }}"
                         class="breadcrumb-link">{{ product.category.friendly_name }}</a>
-                    |
-                    <span class="active-breadcrumb">{{ product.name }}</span>
+                        <span class="bar-pink">|</span>
+                    <span class="text-muted active-breadcrumb">{{ product.name }}</span>
                 </p>
             </div>
         </div>
@@ -50,8 +50,8 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                    <p class="product-title mb-0">{{ product.name }}</p>
+                    <p class="mt-2 mb-2 text-left">€{{ product.price }}</p>
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
@@ -102,7 +102,7 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn rounded-0 text-uppercase mt-5 cta-green" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -110,20 +110,26 @@
                     <form class="form update-form" method="POST" action="{% url 'add_to_wishlist' product.id %}">
                         {% csrf_token %}
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <button class="btn btn-black rounded-0 text-uppercase mt-5">Add to wishlist</button>
+                        <button class="btn btn-outline-black rounded-0 mt-5"><i class="fas fa-heart"></i>  Add to wish list</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>>
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Reviews</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
         <div class="row">
             <div class="col text-center">
-                <a href="{% url 'add_review' product.id %}" class="text-black">Add Review<i class="fas fa-plus"></i></a>
-                <p>
-                    <a class="btn btn-black rounded-0" data-toggle="collapse" href="#collapseReview" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    <span class="text-uppercase">Read Reviews</span>
+                <a href="{% url 'add_review' product.id %}" class="btn btn-outline-black rounded-0 mt-5 mb-5"><i class="fas fa-plus"></i> Add Review</a>
+                
+                    <a class="btn cta-black rounded-0" data-toggle="collapse" href="#collapseReview" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <span>Read Reviews</span>
                     </a>
-                </p>
+               
                 <div class="collapse" id="collapseReview">
                         {% if product.reviews.count > 0 %}
                             {% for review in product.reviews.all %}
@@ -136,7 +142,7 @@
                         {% else %}
                         <div class="card card-body mb-2">
                             <h5 class="card-title">This product does not have any reviews at the moment. </h5>
-                            <p class="card-text">Already purchased this Maisigh piece? Let us know what you think! :)</p>
+                            <p class="card-text mt-2">Already purchased this Maisigh piece? Let us know what you think! :)</p>
                     </div>
                         {% endif %}
                 </div>

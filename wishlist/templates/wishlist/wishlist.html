@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Wish list</h2>
+                <h2 class="logo-font mb-4 text-center">Wish list</h2>
                 <hr>
             </div>
         </div>
@@ -55,11 +55,11 @@
                                         <form class="form update-form" method="POST" action="{% url 'delete_from_wishlist' product.id %}">
                                             {% csrf_token %}
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                            <button class="btn btn-danger rounded-0 text-uppercase"><i class="fas fa-times"> </i>  Remove</button>
+                                            <button class="btn btn-outline-danger rounded-0 text-uppercase"><i class="fas fa-times"> </i>  Remove</button>
                                         </form>
                                         <form class="form update-form" method="POST" action="{% url 'product_detail' product.id %}">
                                             {% csrf_token %}
-                                            <button class="btn btn-black rounded-0 text-uppercase mt-5">Add to Bag</button>
+                                            <button class="btn cta-green rounded-0 text-uppercase mt-5">Add to Bag</button>
                                         </form>
                                     </td>
                                 </tr>
@@ -70,7 +70,7 @@
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        <span class="text-uppercase mb-5">Keep Shopping</span>
                                     </a>
                                 </td>
                             </tr>

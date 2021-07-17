@@ -47,7 +47,7 @@ My own goals as a developer creating this project were to:
 ### External user’s goal:
 
 - Purchase desired items by a secure means.
-- Easily find inspiration for an accessory or locate a specific accessory based on type, occasion or from a personal wishlist. 
+- Easily find inspiration for an accessory or locate a specific accessory based on type, occasion or from a personal wish list. 
 - Share desired items or purchases with social following or with friends directly.
 - Have an enjoyable experience on primary visit as well as future visits.
 
@@ -79,7 +79,7 @@ As a returning user, I would like to:
 - Log in and out without encountering issues so that I can have an enjoyable user experience.
 - View my account so that I can review my current order or previous orders for product info or shipping status.
 - Edit my personal details on my account so that I can update info such as shipping info if my details have changed.
-- Save a wishlist of desired sold out accessories to my account so that I can receive alerts if the product becomes available and possibly purchase the item in the future.
+- Save a wish list of desired sold out accessories to my account so that I can receive alerts if the product becomes available and possibly purchase the item in the future.
 - Have the ability to contact the company so that I can ask a question regarding a product or purchase.
 - Receive discounts on future orders so that I am incentivised to remain loyal to the brand.
 

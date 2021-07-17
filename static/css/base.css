@@ -26,6 +26,10 @@ body {
     font-size: 14px;
 }
 
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #f6c5df;
+}
+
 
 
 .main-logo-link {
@@ -147,8 +151,18 @@ header {
 }
 
 .breadcrumb-link, .breadcrumb-link:hover {
-    color: var(--color-green);
+    color: #000000;
     text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    color: #f6c5df;
+    text-decoration: none;
+}
+
+
+.bar-pink{
+    color: #f6c5df;
 }
 
 .active-breadcrumb {
@@ -157,6 +171,34 @@ header {
 
 .breadcrumbs-text {
     font-size: 16px;
+}
+
+.cta-green:hover {
+    color: #b8e0d2;
+    background-color: #000000;
+}
+
+.cta-green {
+    color: #000000;
+    background-color: #b8e0d2;
+    border: 1px solid black;
+}
+
+.cta-black:hover {
+    color:  #000000;
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+.cta-black {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+
+.product-title{
+        font-weight: 600;
+        font-size: 25px;
 }
 
 /*------ Back to top------*/
@@ -277,7 +319,7 @@ a:link{
   }
 
 .brand-footer {
-    background-color: #b8e0d2;
+    background-color: #f6c5df;
     padding-top: 10px;
     padding-bottom: 10px;
     color: #000000;

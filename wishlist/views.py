@@ -7,7 +7,7 @@ from django.contrib import messages
 
 @login_required
 def wishlist(request):
-    """ A view to return the Wishlist """
+    """ A view to return the Wish list """
     items = []
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.get_or_create(user=user)
@@ -34,7 +34,7 @@ def wishlist(request):
 
 @login_required
 def add_to_wishlist(request, product_id):
-    """ A view to add a item in the Wishlist """
+    """ A view to add an item in the Wishlist """
     redirect_url = request.POST.get('redirect_url')
 
     user = get_object_or_404(UserProfile, user=request.user)
@@ -46,23 +46,23 @@ def add_to_wishlist(request, product_id):
         test = WishlistItem.objects.filter(
             wishlist=wishlist_user, product=product).exists()
         if test:
-            messages.error(request, "Product already in your wishlist")
+            messages.error(request, "Product already in Wish List. Go to My Account to view Wish List")
             return redirect(redirect_url)
 
         else:
             added_item = WishlistItem(
                 wishlist=wishlist_user, product=product, date_added=timezone.now())
             added_item.save()
-            messages.success(request, "Product added to your wishlist")
+            messages.success(request, "Product added to Wish List. Go to My Account to view Wish List")
             return redirect(redirect_url)
     else:
-        messages.error(request, "Click 'Add to wishlist' to add a item ")
+        messages.error(request, "Click 'Add to Wish List' to add an item ")
         return render(request, 'home/index.html')
 
 
 @login_required
 def delete_from_wishlist(request, product_id):
-    """ A view to delete a item in the wishlist"""
+    """ A view to delete a item in the wish list"""
 
     redirect_url = request.POST.get('redirect_url')
 
@@ -72,19 +72,19 @@ def delete_from_wishlist(request, product_id):
     if request.POST:
         product = Product.objects.get(pk=product_id)
 
-        # look for product in user's wishlistItem - returns true if exists
+        # Look for product in user's wishlist Item - returns true if exists
         test = WishlistItem.objects.filter(product=product).exists()
 
         if test:
             product = WishlistItem.objects.get(product=product)
             product.delete()
-            messages.success(request, "Product removed from wishlist")
+            messages.success(request, "Product removed from Wish List")
             return redirect(redirect_url)
 
         if test is None:
             messages.error(
-                request, "You cannot delete an item that isn't in your wishlist")
+                request, "You cannot delete an item that isn't in your Wish List")
             return redirect(redirect_url)
     else:
-        messages.error(request, 'Item can only be deleted from your wishlist')
+        messages.error(request, 'Item can only be deleted from your Wish List')
         return render(request, 'home/index.html')
