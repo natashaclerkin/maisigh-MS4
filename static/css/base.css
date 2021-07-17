@@ -306,12 +306,12 @@ footer a{
 }
 
 footer a:hover{
-    color: #f6c5df;
+    color: #f3e2eb;
 }
 
 
 .social-links .fab:hover {
-	color: #f6c5df;
+	color: #f3e2eb;
 }
 
 a:link{
@@ -319,7 +319,7 @@ a:link{
   }
 
 .brand-footer {
-    background-color: #f6c5df;
+    background-color: #f3e2eb;
     padding-top: 10px;
     padding-bottom: 10px;
     color: #000000;

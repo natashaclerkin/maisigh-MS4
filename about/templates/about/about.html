@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+<!--- Header --->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">About Maisigh</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+
+
+        <div class="row align-items-center my-4">
+            <div class="col-12 col-md-6">
+                <div class="image-container my-4">
+                    <img src="/media/about.jpg" alt="about-maisigh" width="550" height="400" class="about-image">
+                </div>
+            </div>
+            <!--- About text container --->
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="about-details-container mb-5 mt-md-5">
+                    <h2 class="about-heading">Fashion + Sustainability</h2>
+
+                    <p class="about-text">
+                       about us text 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+{% endblock %}
