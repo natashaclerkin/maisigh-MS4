@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}favicon.ico">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <title>404</title>
+   </head>
+   <body>
+      <div>
+         <div class="img">
+            <div class="error-text">
+               <h1 class="white-text error-title">Oh no something's broken!</h1>
+               <h2 class="white-text error-title">404 - Page Not Found</h2>
+               <p class="white-text lowercase"><i>Where's the style gone? I wanna go back</i></p>
+               <a class="btn cta-black rounded-0" href="{{ url_for('index') }}">Take me back</a>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

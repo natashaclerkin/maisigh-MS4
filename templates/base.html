@@ -97,6 +97,7 @@
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                 <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item">Product Management</a>
+                                <a href="{% url 'add_blog' %}" aria-label="Add a Blog Post" class="dropdown-item">Blog Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'wishlist' %}" aria-label="Wish List" class="dropdown-item">Wish List</a>
@@ -189,6 +190,7 @@
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item">Product Management</a>
+                            <a href="{% url 'add_blog' %}" aria-label="Add a Blog Post" class="dropdown-item">Blog Management</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
                             <a href="{% url 'wishlist' %}" aria-label="Wish List" class="dropdown-item">Wish List</a>
