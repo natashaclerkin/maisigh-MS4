@@ -239,7 +239,8 @@ I took inspiration from the following sources however I did implement my own cus
 
 
 ## Content and Media
-The main content for the site was created by myself and the About and Product Detail content were adapted from [Lilywho.](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-cz-bar-yellow-gold-necklace-lw-n011-y)
+The main content for the site was created by myself and the About and Product Detail content were adapted from [Lilywho.](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-cz-bar-yellow-gold-necklace-lw-n011-y) and the blog content from [Lebrusanstudio.](https://www.lebrusanstudio.com/pages/what-is-ethical-jewellery-and-why-does-it-matter)
+
 
 Site Imagery was sourced from the following sources:
 
@@ -267,6 +268,13 @@ Site Imagery was sourced from the following sources:
 - Silver Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-silver-earrings-lw-e011-s)
 - Rose Gold Earrings #1 - [Lilywho](https://lilywho.ie/products/lilywho-thick-stone-hoop-rose-gold-gold-earrings-lw-e028-r)
 - Rose Gold Earrings #2 - [Lilywho](https://lilywho.ie/collections/lilywho-jewellery/products/lilywho-spike-hoop-rose-gold-earrings-lw-e038-r)
+
+### About Us
+- About us - [Pexels.com](https://www.pexels.com/@multimediayreaccion)
+
+### Blog
+- Blog post #1 - [Glamour.com](https://media.glamour.com/photos/5f5af8a354d1df4e3c1016bb/master/pass/sustainable%20jewelry%20brand.jpg)
+- Blog post #2 - [TUN.com](https://www.tun.com/blog/wp-content/uploads/2019/12/sustainable-jewelry.jpg)
 
 ### Miscellaneous
 - No Image - [Deposit Photos](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdepositphotos.com%2Fvector-images%2Fno-image-available.html&psig=AOvVaw3ke_Ec4FTVWrR29aMEdVJ_&ust=1626273444230000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCNjxifWi4PECFQAAAAAdAAAAABAJ)

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+
+{% endblock %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Blog</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <!-- Breadcrumbs-->
+    <div class="container">
+        <div class="row shop-top-row">
+            <div class="col-12">
+                <div class="breadcrumbs">
+                    <p>
+                        <a href="{% url 'home' %}" class="breadcrumb-link">Home</a>
+                        <span class="bar-pink">|</span>
+                        <span class="text-muted active-breadcrumb">Blog</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--div class="row">
+        <div class="col-12 text-center mt-3 mb-3">
+            <h6 class="text-uppercase">blog posts description!</h6>
+        </div>
+    </div-->
+    <div class="row">
+        <div class="col-10 offset-1">
+            {% for blog in blogs %}
+            <!-- Blog Card -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-lg-4">
+                        <!-- Blog Image -->
+                        {% if blog.image %}
+                        <a href="{% url 'blog_detail' blog.slug %}">
+                        <img src="{{ blog.image.url }}" alt="{{ blog.name }}" class="card-img img-fluid">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'blog_detail' blog.slug %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}" class="card-img img-fluid">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <!-- Card Body -->
+                    <div class="col-lg-8">
+                        <div class="card-body">
+                            <a href="{% url 'blog_detail' blog.slug %}" class="text-black">
+                                <h5 class="card-title blog-details-title mb-1">{{ blog.title }}</h5>
+                            </a>
+                            <small class="card-text text-muted">{{ blog.author }} | {{ blog.created_on}}</small>
+                            <!-- Superuser edit/delete buttons -->
+                            {% if request.user.is_superuser %}
+                            <small class="ml-2">
+                            <a href="{% url 'edit_blog' blog.slug %}">Edit</a> |
+                            <a href="#deleteBlog{{ blog.slug }}" class="text-danger" data-toggle="modal" >Delete</a>
+                            </small>
+                            {% endif %}
+                            <p class="card-text mt-2">{{ blog.body|slice:':150' }} ...</p>
+                            <a href="{% url 'blog_detail' blog.slug %}" class="btn cta-black rounded-0">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Delete Modal -->
+            <div class="modal fade text-center" id="deleteBlog{{ blog.slug }}" tabindex="-1" role="dialog" aria-labelledby="deleteBlog{{ blog.slug }}ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- Close button -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                            <!-- Modal heading -->
+                            <h5 class="modal-title" id="deleteBlog{{ blog.slug }}Label">
+                                Are you sure you want to delete <br>" {{ blog.title }} " ? <br>
+                            </h5>
+                            <p>Once you do you will not be able to undo this action.</p>
+                        </div>
+                        <div class="modal-footer modal-btns">
+                            <!-- Cancel button -->
+                            <button type="button" class="btn text-uppercase cancel-btn" data-dismiss="modal">Cancel</button>
+                            <!-- Delete button -->
+                            <a id="checkoutButton" href="{% url 'delete_blog' blog.slug %}" class="btn delete-btn">
+                            <span class="text-uppercase text-danger">Delete</span>                      
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

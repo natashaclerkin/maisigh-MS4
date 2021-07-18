@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Collection</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <!-- Breadcrumbs-->
+    <div class="container">
+        <div class="row shop-top-row">
+            <div class="col-12">
+                <div class="breadcrumbs">
+                    <p>
+                        <a href="{% url 'home' %}" class="breadcrumb-link">Home</a>
+                        <span class="bar-pink">|</span>
+                        <a href="{% url 'blogs' %}" class="breadcrumb-link">Blog</a>
+                        <span class="bar-pink">|</span>
+                        <span class="text-muted active-breadcrumb">{{ blog.title }}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="mx-auto">
+                <!-- Blog image -->
+                {% if blog.image %}
+                <a href="{{ blog.image.url }}">
+                <img src="{{ blog.image.url }}" alt="{{ blog.name }}" class="card-img">
+                </a>
+                {% else %}
+                <a href="">
+                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}" class="img-fluid">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center mt-4">
+            <!-- Blog title -->
+            <h2 class="text-uppercase blog-details-title">{{ blog.title }}</h2>
+            <!-- Blog author and date -->
+            <p class="text-muted">Written by <strong>{{ blog.author }} | {{ blog.created_on}}</strong></p>
+            <!-- Superuser edit/delete buttons -->
+            {% if request.user.is_superuser %}
+            <small class="ml-2">
+            <a href="{% url 'edit_blog' blog.slug %}">Edit</a> |
+            <a href="#deleteBlog{{ blog.slug }}" class="text-danger" data-toggle="modal" >Delete</a>
+            </small>
+            {% endif %}
+            <!-- Blog content -->
+            <p class="blog-content mb-5">{{ blog.body }}</p>
+        </div>
+    </div>
+    <!-- Delete Modal -->
+    <div class="modal fade text-center" id="deleteBlog{{ blog.slug }}" tabindex="-1" role="dialog" aria-labelledby="deleteBlog{{ blog.slug }}ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Close button -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <!-- Modal heading -->
+                    <h5 class="modal-title" id="deleteBlog{{ blog.slug }}Label">
+                        Are you sure you want to delete <br>" {{ blog.title }} " ? <br>
+                    </h5>
+                    <p>Once you do you will not be able to undo this action.</p>
+                </div>
+                <div class="modal-footer modal-btns">
+                    <!-- Cancel button -->
+                    <button type="button" class="btn text-uppercase cancel-btn" data-dismiss="modal">Cancel</button>
+                    <!-- Delete button -->
+                    <a id="checkoutButton" href="{% url 'delete_blog' blog.slug %}" class="btn delete-btn">
+                    <span class="text-uppercase text-danger">Delete</span>                      
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
