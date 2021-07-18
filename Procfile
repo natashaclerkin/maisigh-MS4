@@ -1,1 +1,1 @@
-web: gunicorn maisigh-MS4.wsgi:application
+web: gunicorn maisigh.wsgi:application
