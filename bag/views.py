@@ -45,7 +45,7 @@ def adjust_bag(request, item_id):
 
     else:
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        messages.success(request, f'Removed {product.name} from shopping bag')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -59,7 +59,7 @@ def remove_from_bag(request, item_id):
     try:
         bag = request.session.get('bag', {})
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        messages.success(request, f'Removed {product.name} from shopping bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
