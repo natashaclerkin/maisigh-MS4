@@ -101,7 +101,7 @@
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3 text-success">
                                         <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        <a href="#deleteProduct{{ product.id }}" class="text-danger" data-toggle="modal" >Delete</a>
                                     </small>
                                     {% endif %}
                                 </div>
@@ -129,6 +129,28 @@
                     <hr>
                 </div>
                 {% endif %}
+                <!-- Delete Modal -->
+                <div class="modal fade text-center" id="deleteProduct{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteProduct{{ product.id }}ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h5 class="modal-title" id="deleteProduct{{ product.id }}Label">
+                                    Are you sure you want to delete <br>" {{ product.name }} " ? <br>
+                                </h5>
+                                <p>You will not be able to undo this action.</p>
+                            </div>              
+                            <div class="modal-footer modal-btns">
+                                <button type="button" class="btn text-uppercase cta-black" data-dismiss="modal">Cancel</button>
+                                <a id="checkoutButton" href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger rounded-0 text-uppercase">
+                                    <span>Delete</span>                      
+                                </a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
                 {% endfor %}
             </div>
         </div>
