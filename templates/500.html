@@ -2,16 +2,16 @@
 {% load static %} 
 {% block content%}
 
-<div class="container section-top">
+<div class="section-top">
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="text-uppercase">
                500 - Internal server error
             </h1>
-            <h3 class="mt-5">
+            <p class="mt-5">
                 Aw no! Please try to refresh this page or contact us if the problem persists. :(
-            </h3>
-            <a href="{% url 'home' %}" class="btn cta-black mt-3" aria-label="Back home button"> <i class="fas fa-chevron-left mr-1"></i> Take me back to the style </a>
+            </p>
+            <a href="{% url 'home' %}" class="btn cta-black mt-5 text-uppercase" aria-label="Back home button"> <i class="fas fa-chevron-left mr-1"></i> Take me back to the style </a>
         </div>
     </div>
 </div>

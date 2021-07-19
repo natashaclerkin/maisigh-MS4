@@ -1,8 +1,13 @@
-html,
+html {
+    height: 100%;
+}
+
 body {
+    color: #000;
     font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* from Bulma */
@@ -209,8 +214,9 @@ width: inherit;
 
 /* 404 & 405*/
 .section-top {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 250px;
+    padding-bottom: 220px;
+    background-color: #b8e0d2;
 }
 
 /* ------- Delete Modal ------ */
