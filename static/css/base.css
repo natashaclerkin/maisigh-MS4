@@ -229,6 +229,20 @@ div.img {
 	height: 100vh;
 }
 
+/* ------- Delete Modal ------ */
+
+.modal-header {
+    display: block;
+}
+
+.modal-header p {
+    margin-top: 1rem;
+}
+
+.modal-btns {
+    display: initial;
+}
+
 /*------ Back to top------*/
 .btt-button {
     height: 42px;
