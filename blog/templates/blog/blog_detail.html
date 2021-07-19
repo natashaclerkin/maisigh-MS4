@@ -43,13 +43,9 @@
             <div class="mx-auto">
                 <!-- Blog image -->
                 {% if blog.image %}
-                <a href="{{ blog.image.url }}">
                 <img src="{{ blog.image.url }}" alt="{{ blog.name }}" class="card-img">
-                </a>
                 {% else %}
-                <a href="">
                 <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}" class="img-fluid">
-                </a>
                 {% endif %}
             </div>
         </div>
