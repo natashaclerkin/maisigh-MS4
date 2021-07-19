@@ -208,25 +208,9 @@ width: inherit;
 
 
 /* 404 & 405*/
-
-.error-text {
-	text-align: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -55%);
-	    -ms-transform: translate(-50%, -55%);
-	        transform: translate(-50%, -55%);
-	padding: 50px;
-	background-color: #000000;
-}
-
-div.img {
-	background-image: url("/media/error.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 100vw;
-	height: 100vh;
+.section-top {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* ------- Delete Modal ------ */
