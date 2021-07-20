@@ -386,20 +386,11 @@ a:link{
 }
 
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem; 
+    color: #6c757d; 
 }
 
 .allauth-form-inner-content input {
@@ -446,7 +437,7 @@ a:link{
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #17a2b8; 
 }
 
 /* Product Form */
@@ -478,88 +469,13 @@ a:link{
 }
 
 
-
-@media only screen and (max-width: 1200px) {
-    .navbar {
-        margin: 16px 75px;;
-        padding: 0px;
-    }
-    
-    .navbar-toggler {
-        font-size: 1rem;
-    }
-    
-    .nav-item-list {
-        text-align: left;
-        padding: 40px 0px;
-        max-width: 100%;
-        }
-    
-    .nav-item-list li {
-        padding: 5px 0px;
-        font-size: 18px;
-        }
-    
-    .navbar-brand {
-        letter-spacing: 3.5px;
-        font-size: 20px;
-        }
-    
-    .bag-icon i {
-        font-size: 1rem;
-    }
-
-    .bag-container {
-        margin-top: 150px;
-    }
-
-
-    .my-account {
-        display: none;
-        }
-    
-    /*.search-desktop {
-            display: none;
-            }
-    */
-            
-    .search-mobile {
-            display: block;
-            }
-
-    .my-account-mobile {
-        display: block;
-        }
-    }
-
     
 
-@media only screen and (max-width: 768px) {
-    
-    .navbar {
-        margin: 16px;
-        padding: 0px;
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
     }
-    
-    .navbar-brand-col {
-        width: auto;
-    }
-    
-    .toggler-col {
-        width: auto;
-        padding: 0;
-    }
-    
-    .bag-container {
-        margin-top: 50px;
-        }
-    }
-        
-        
-@media only screen and (max-width: 600px) {
-    
-    .navbar-brand {
-        letter-spacing: 3px;
-        font-size: 16px;
-        }
-    }
+  }
