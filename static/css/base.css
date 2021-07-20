@@ -473,9 +473,99 @@ a:link{
 
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
+
+@media only screen and (max-width: 1200px) {
+    .navbar {
+        margin: 16px 75px;;
+        padding: 0px;
     }
-  }
+    
+    .navbar-toggler {
+        font-size: 1rem;
+    }
+    
+    .nav-item-list {
+        text-align: left;
+        padding: 40px 0px;
+        max-width: 100%;
+        }
+    
+    .nav-item-list li {
+        padding: 5px 0px;
+        font-size: 18px;
+        }
+    
+    .navbar-brand {
+        letter-spacing: 3.5px;
+        font-size: 20px;
+        }
+    
+    .bag-icon i {
+        font-size: 1rem;
+    }
+    
+    .nav-bag-account {
+        -webkit-box-orient: unset;
+        -webkit-box-direction: unset;
+            -ms-flex-direction: unset;
+                flex-direction: unset;
+        }
+    
+    .my-account {
+        display: none;
+        }
+    
+    .my-account-mobile {
+        display: block;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+    
+    body {
+        font-size: 14px;
+    }
+    
+    .navbar {
+        margin: 16px;
+        padding: 0px;
+    }
+    
+    .navbar-brand-col {
+        width: auto;
+    }
+    
+    .toggler-col {
+        width: auto;
+        padding: 0;
+    }
+    
+    .message-container {
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, 0px);
+        z-index: 9999;
+        overflow-wrap: break-word;
+    }
+    
+    
+    }
+    
+    
+    @media only screen and (max-width: 600px) {
+    
+    .navbar-brand {
+        letter-spacing: 3px;
+        font-size: 16px;
+        }
+    
+    .product-detail-container {
+        margin-top: 50px;
+        margin-bottom: 150px;
+    }
+    
+    .product-detail-image img {
+        padding-bottom: 30px;
+    }
+    
+    }
