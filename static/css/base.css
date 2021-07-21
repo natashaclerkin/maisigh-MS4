@@ -574,10 +574,32 @@ a:link {
         padding: .375rem .375rem;
     }
 
+    .btn.cta-black.rounded-0,
+    .btn.cta-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.cta-green.rounded-0,
+    .btn.cta-green.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
     .btn.btn-outline-black.rounded-0.btn-lg,
     .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
-        font-size: .75rem;
+        font-size: 14px;
+    }
+
+    .btn.btn-cta-black.rounded-0.btn-lg,
+    .btn.cta-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: 14px;
+    }
+
+    .btn.btn-cta-green.rounded-0.btn-lg,
+    .btn.cta-green.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: 14px;
     }
 
     .increment-qty, .decrement-qty {
