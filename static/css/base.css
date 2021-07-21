@@ -572,16 +572,19 @@ a:link {
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
+        font-size: 14px;
     }
 
     .btn.cta-black.rounded-0,
     .btn.cta-black.rounded-0 {
         padding: .375rem .375rem;
+        font-size: 14px;
     }
 
     .btn.cta-green.rounded-0,
     .btn.cta-green.rounded-0 {
         padding: .375rem .375rem;
+        font-size: 14px;
     }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
