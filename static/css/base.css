@@ -498,16 +498,6 @@ a:link {
     border-radius: 0;
 }
 
-.footer-container{
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-}
-
-.menu-footer li {
-    display: block;
-  }
 
 
 /* -------------------------------- Media Queries */
@@ -560,16 +550,6 @@ a:link {
     }
 }
 
-@media (max-width: 950px) {
-    .menu-footer ul{
-      display: flex;
-    }
-    .menu-footer li {
-      display: inline;
-      width: 100%;
-      text-align: center;
-    }
-  }
 
 @media only screen and (max-width: 768px) {
 
@@ -614,6 +594,10 @@ a:link {
     }
 
     .maisigh-icons {
+        font-size: 12px;
+    }
+
+    .footer-links li {
         font-size: 12px;
     }
 }
