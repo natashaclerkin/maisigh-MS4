@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_list_or_404, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_list_or_404, get_object_or_404
+)
 from .models import Product, UserProfile, Wishlist, WishlistItem
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
@@ -46,14 +48,18 @@ def add_to_wishlist(request, product_id):
         test = WishlistItem.objects.filter(
             wishlist=wishlist_user, product=product).exists()
         if test:
-            messages.error(request, "Product already in Wish List. Go to My Account to view Wish List")
+            messages.error(
+                request,
+                "Product already in Wish List. Go to My Account to view Wish List")
             return redirect(redirect_url)
 
         else:
             added_item = WishlistItem(
                 wishlist=wishlist_user, product=product, date_added=timezone.now())
             added_item.save()
-            messages.success(request, "Product added to Wish List. Go to My Account to view Wish List")
+            messages.success(
+                request,
+                "Product added to Wish List. Go to My Account to view Wish List")
             return redirect(redirect_url)
     else:
         messages.error(request, "Click 'Add to Wish List' to add an item ")
@@ -83,7 +89,8 @@ def delete_from_wishlist(request, product_id):
 
         if test is None:
             messages.error(
-                request, "You cannot delete an item that isn't in your Wish List")
+                request,
+                "You cannot delete an item that isn't in your Wish List")
             return redirect(redirect_url)
     else:
         messages.error(request, 'Item can only be deleted from your Wish List')
