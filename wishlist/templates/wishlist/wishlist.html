@@ -57,13 +57,13 @@
                                         <form class="form update-form" method="POST" action="{% url 'delete_from_wishlist' product.id %}">
                                             {% csrf_token %}
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                            <button class="btn btn-outline-danger rounded-0 text-uppercase mt-3 mb-3">Remove</button>
+                                            <button class="btn btn-outline-danger rounded-0 text-uppercase mt-5 mb-5">Remove</button>
                                         </form>
                                         </td>
                                         <td>
                                         <form class="form update-form" method="POST" action="{% url 'product_detail' product.id %}">
                                             {% csrf_token %}
-                                            <button class="btn cta-green rounded-0 text-uppercase mt-3 mb-3">Add to Bag</button>
+                                            <button class="btn cta-green rounded-0 text-uppercase mt-5 mb-5">Add to Bag</button>
                                         </form>
                                     </td>
                                 </tr>
