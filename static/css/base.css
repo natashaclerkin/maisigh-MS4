@@ -569,7 +569,7 @@ a:link {
         font-size: .9rem;
     } 
 
-    .btn.btn-outline-danger.rounded-0,{
+    .btn.btn-outline-danger.rounded-0 {
         padding: .375rem .375rem;
         font-size: 14px;
     }
