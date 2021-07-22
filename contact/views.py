@@ -13,7 +13,7 @@ def contact(request):
             message = form.cleaned_data['message']
             messages.success(request, (
                 "Thanks for getting in touch! "
-                "We will respond to you as soon as possible."
+                "The Maisigh crew will get back to you shortly."
             ))
         return redirect('home')
 
