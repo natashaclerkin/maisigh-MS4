@@ -660,4 +660,9 @@ a:link {
     .footer-links li {
         font-size: 12px;
     }
+
+    p {
+        font-size: 16px
+    }
+    
 }
