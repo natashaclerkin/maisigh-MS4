@@ -149,7 +149,7 @@
             </div>
         </div>
         <!-- Delete Modal -->
-        <div class="modal fade text-center" id="deleteProduct{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteProduct{{ product.id }}ModalLabel" aria-hidden="true">
+        <div class="modal fade text-center" id="deleteProduct{{ product.id }}" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -163,7 +163,7 @@
                     </div>              
                     <div class="modal-footer modal-btns">
                         <button type="button" class="btn text-uppercase cta-black" data-dismiss="modal">Cancel</button>
-                        <a id="checkoutButton" href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger rounded-0 text-uppercase">
+                        <a id="productButton" href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger rounded-0 text-uppercase">
                             <span>Delete</span>                      
                         </a>
                     </div>
