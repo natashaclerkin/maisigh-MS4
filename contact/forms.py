@@ -1,18 +1,24 @@
 from django import forms
-from .models import Contact
 
 
-class ContactForm(forms.ModelForm):
-    class Meta:
-        model = Contact
-        fields = ('name', 'email', 'message')
+class ContactForm(forms.Form):
+    name = forms.CharField(required=True)
+    from_email = forms.EmailField(required=True)
+    message = forms.CharField(widget=forms.Textarea, required=True)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black'
         placeholders = {
-            'name': 'Enter your Name',
-            'email': 'Enter you Email',
+            'name': 'Full Name',
+            'from_email': 'Email Address',
             'message': 'Message',
         }
+
+        self.fields['name'].widget.attrs['autofocus'] = True
+        for field in self.fields:
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].label = False
