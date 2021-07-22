@@ -5,7 +5,6 @@
     <div class="container header-container mt-s-2">
         <div class="row">
             <div class="col text-center">
-                <hr class="w-50 mb-1 mt-4">
                 <h2 class="logo-font m-4">Contact Us</h2>
                 <hr class="w-50 mb-1">
             </div>
@@ -24,12 +23,12 @@
 
         <div class="row">    
             <div class="col-12 col-lg-6 offset-lg-3">
-                <form method="POST" action="{% url 'contact' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'contact' %}" class="form mb-2" id="contact-form">
                     {% csrf_token %}
                         {{ form|crispy }}
                     <div class="text-right mt-5 mb-5 text-center">
                         <a class="btn text-uppercase btn-outline-black rounded-0 mb-3" href="{% url 'home' %}">Cancel</a>
-                        <button class="btn text-uppercase cta-green rounded-0 mb-3" type="submit">Contact</button>
+                        <button class="btn text-uppercase cta-green rounded-0 mb-3" type="contact-submit">Contact</button>
                     </div>
                 </form>
             </div>
