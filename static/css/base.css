@@ -71,11 +71,22 @@ body {
     border: 1px solid black !important;
 }
 
+.delivery-col P {
+    padding: 5px 0px;
+    margin: 0;
+}
+
 
 .delivery-container {
     background-color: #2C2C2C;
     color: #ffffff;
 }
+
+
+#delivery-banner{
+    background-color: #000000;
+}
+
 
 .my-account-mobile {
     display: none;
@@ -104,7 +115,7 @@ header {
 }
 
 .navbar {
-    margin: 0px 24px;
+    margin: 0px;
 }
 
 .navbar-toggler {
@@ -112,7 +123,7 @@ header {
 }
 
 .nav-item {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .nav-icons {
