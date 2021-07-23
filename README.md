@@ -25,15 +25,15 @@ The brief was to build a full-stack site based around business logic used to con
 
 [View website](http://maisigh-ms4.herokuapp.com) 
  
-[Maisigh.ie](http://maisigh-ms4.herokuapp.com) is a fictional Ecommerce site that allows users to locate sustainable, Irish jewellery. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
+[Maisigh.ie](http://maisigh-ms4.herokuapp.com) is an Ecommerce site that allows users to locate sustainable, Irish jewellery. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
 
 Maisigh knows that simply having a good product is no longer enough to win a customer’s heart. They now want more than just quality, and demand products that align with their personal values. 
-In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Maisigh is fully committed to providing Irish handcrafted accessories with minimal impact on the environment. Enter Maisigh. Customers will adore the selection of fashion-forward, ethically-sourced products that they will fall in love with.
+In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Enter Maisigh. Maisigh is fully committed to providing Irish handcrafted accessories with minimal impact on the environment. Customers will adore the selection of fashion-forward, ethically-sourced products that they will fall in love with.
 
 My own goals as a developer creating this project were to: 
-- Develop a Ecommerce platform that enables the commercial process of buying and selling online including a search feature that allows users to locate desired products, a cart feature that lets them manage their order and a payment feature that allow them to purchase their items securely.
+- Develop a Ecommerce platform that enables the commercial process of buying and selling online. For customers, this would involve a search feature that allows users to locate desired products, a cart feature that lets them manage their order and a payment feature that allow them to purchase their items securely. For employees, this would allow admin users to add, update and delete product and blog content when required. 
 - Create an app that is highly accessible, responsive and simplistic in design.
-- Create the backend code and frontend forms allowing admin users to add new products to the site, view them, edit them and delete them using CRUD operations.
+- Create the backend code and frontend forms allowing admin users to carry out CRUD operations.
 - Create the backend and frontend functionality for users to locate products based on the item's fields providing full search functionality on the site.
 - Provide these search results in a manner that is visually appealing and user-friendly.
 
@@ -54,8 +54,8 @@ My own goals as a developer creating this project were to:
 
 ### Site owner's goal:
 - Provide a professional, accessible and secure ecommerce site where users can find desired items.
-- Promote handcrafted, fashionable and sustainable Irish accessories online.
-- Earn profit by making a selection of handcrafted, sustainable Irish accessories available to users. 
+- Promote handcrafted, fashionable and sustainable Irish jewellery online.
+- Earn profit by making a selection of handcrafted, sustainable Irish jewellery available to users. 
 - Provide an enjoyable experience for users to encourage them to return to the site by featuring sitewide intuitive prompts. 
 - Expand the Maisigh brand and customer base.
 
@@ -214,18 +214,79 @@ The Testing process has been documented in this [TESTING.md file](TESTING.md "TE
 
 # Deployment
 
-DEPLOYMENT
+
 ## Local Deployment
 
 ### Requirements:
+- [Python 3](https://www.python.org) 
+- [PIP](https://pypi.org/project/pip/) 
+- [Git](https://git-scm.com/) 
+- [Amazon AWS S3 Bucket](https://aws.amazon.com/)
+
 
 ### How to clone Maisigh:
-
+![Local Deployment](https://res.cloudinary.com/nclerkin/image/upload/v1626992601/deployment_s6vy1z.png "Local Deployment")
+1. Log in to GitHub and go to [this repository](https://github.com/natashaclerkin/maisigh-MS4).
+2. At the top of the repository, select **Code** and copy the **Clone URL**.
+3. In your IDE, open a Terminal window and change to the directory where you want the cloned directory to be made and type `git clone` and paste in `https://github.com/natashaclerkin/maisigh-MS4.git`.
+4. Click enter and the project will be created and cloned locally.
 
 ### Working with the local copy:
+1. Create a file called `env.py` to hold your app's environment variables, which should contain the following:
+```console
+import os
+
+os.environ.setdefault("SECRET_KEY", "**Secret key goes here**")
+os.environ.setdefault("DEVELOPMENT", "TRUE")
+os.environ.setdefault('STRIPE_PUBLIC_KEY',"**Stripe generated key goes here**")
+os.environ.setdefault('STRIPE_SECRET_KEY', "**Stripe generated key goes here**")
+os.environ.setdefault('STRIPE_WH_SECRET', "**Stripe generated key for individual webhook endpoint goes here**")
+```
+To find Stripe keys, login to Stripe and then under the 'Developers' tab to locate both keys.
+
+The webhook secret key can be found under 'Webhooks', an endpoint should then be set to receive all events and match the below url structure:
+```
+<siteurl>/checkout/wh/
+```
+Different endpoints are required for the local and deployed projects. Ensure the `STRIPE_WH_SECRET` is updated accordingly in env.py.
+
+2. Create a .gitignore file in the root directory of the project and add the env.py along with the below to prevent from being made public:
+```
+core.Microsoft*
+core.mongo*
+core.python*
+env.py
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.pyc
+node_modules/
+db.json
+```
+3. Install all the project dependencies from the terminal window of your IDE by typing
+```
+pip3 install -r requirements.txt
+```
+4. Apply database migrations using:
+```
+python manage.py migrate
+```
+5. Create a new superuser with:
+```
+python manage.py createsuperuser
+```
+6. Type the below into the terminal to run the app locally. 
+```
+python manage.py runserver
+```
 
 
 ## Heroku Deployment
+
+To deploy the app to Heroku from the [repository](https://github.com/natashaclerkin/maisigh-MS4), the following steps were taken:
+
+
+ADD ADDITIONAL INFO
 
  
 [^ Back To Top ](#contents)
