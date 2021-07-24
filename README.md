@@ -28,7 +28,7 @@ The brief was to build a full-stack site based around business logic used to con
 [Maisigh.ie](http://maisigh-ms4.herokuapp.com) is an Ecommerce site that allows users to locate sustainable, Irish jewellery. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
 
 Maisigh knows that simply having a good product is no longer enough to win a customer’s heart. They now want more than just quality, and demand products that align with their personal values. 
-In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Enter Maisigh. Maisigh is fully committed to providing Irish handcrafted accessories with minimal impact on the environment. Customers will adore the selection of fashion-forward, ethically-sourced products that they will fall in love with.
+In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Enter Maisigh. Maisigh is fully committed to providing Irish handcrafted jewellery with minimal impact on the environment. Customers will adore the selection of fashion-forward, ethically-sourced products that they will fall in love with.
 
 My own goals as a developer creating this project were to: 
 - Develop a Ecommerce platform that enables the commercial process of buying and selling online. For customers, this would involve a search feature that allows users to locate desired products, a cart feature that lets them manage their order and a payment feature that allow them to purchase their items securely. For employees, this would allow admin users to add, update and delete product and blog content when required. 
@@ -47,7 +47,7 @@ My own goals as a developer creating this project were to:
 ### External user’s goal:
 
 - Purchase desired items by a secure means.
-- Easily find inspiration for an accessory or locate a specific accessory based on type, occasion or from a personal wish list. 
+- Easily find inspiration for an accessory or locate a specific jewellery piece based on type, price, alphabetically, rating or from a personal wish list. 
 - Share desired items or purchases with social following or with friends directly.
 - Have an enjoyable experience on primary visit as well as future visits.
 
@@ -67,19 +67,19 @@ My own goals as a developer creating this project were to:
 As a new user, I would like to:
 - View a visually clean and appealing homepage so that I can instantly understand the purpose of the site and navigate its offering easily.
 - Access the site from any mobile, tablet or desktop devices so that I can have an equally enjoyable experience regardless of the selected device/platform.
-- View content without the requirement to register so that I can quickly locate a specific accessory.
-- Browse and filter accessories by product type, occasion or price so that I can easily find inspiration for an accessory.
-- View a list of items by product type/occasion/details keyword search criteria so that I can quickly locate a specific accessory.
+- View content without the requirement to register so that I can quickly locate a specific jewellery piece.
+- Browse and filter jewellery by product type, rating, name or price so that I can easily find inspiration for a jewellery piece.
+- View a list of items by product type/name/details keyword search criteria so that I can quickly locate a specific jewellery piece.
 - Learn more about where the products come from so that I can trust that I'm purchasing ethically-sourced products supporting the environment.
-- View more specific product information about a particular accessory such as materials used, size, additional images and delivery info.
+- View more specific product information about a particular jewellery piecesuch as materials used, dimensions etc.
 - View the total cost of a potential order containing multiple products.
 - Register a profile easily so that I can store address and billing information to streamline order process on future visits.
 
 As a returning user, I would like to:
 - Log in and out without encountering issues so that I can have an enjoyable user experience.
-- View my account so that I can review my current order or previous orders for product info or shipping status.
+- View my account so that I can review previous orders for product info or shipping status for current orders.
 - Edit my personal details on my account so that I can update info such as shipping info if my details have changed.
-- Save a wish list of desired sold out accessories to my account so that I can receive alerts if the product becomes available and possibly purchase the item in the future.
+- Save a wish list of desired products to my account so that I can possibly purchase the item in the future when I can afford the item.
 - Have the ability to contact the company so that I can ask a question regarding a product or purchase.
 - Receive discounts on future orders so that I am incentivised to remain loyal to the brand.
 
@@ -90,10 +90,10 @@ As a business/admin user, I would like to have access to all of the above as wel
 
 - The ability to view, add, edit or remove product categories so that I can keep the categories relevant to what users are searching for.
 - The ability to view, add, edit or remove products so that I can review and reflect the current stock levels and product information.
-- The ability to view, add, edit or remove FAQs so that I can keep the questions relevant to the features that customers may have difficulties with.
+- The ability to view, add, edit or remove blog articles so that I can keep the content relevant to the customer's interests that they will enjoy.
 - Ensure intuitive text is present so that I can provide an enjoyable user experience when users interact with the content or features.
 - View the Maisigh logo in as many locations on the website so that I can create awareness for the brand.
-- Offer a discount to first time customers so that I can gain repeat customers for the brand. 
+- Offer a discount to customers so that I can gain repeat customers for the brand. 
 - View analytics/reports for the checkout process so that I can highlight and fix any potential cart abandonment issues relating to the design and make necessary improvements.  
 
 
@@ -132,6 +132,8 @@ COMPLETE FEATURES
 
 ## Features Left to Implement
 COMPLETE FEATURES LEFT TO IMPLEMENT
+additional photos
+cross-selling items
 
 ![IMAGE](https://res.cloudinary.com/nclerkin/image.png "IMAGE")
 
