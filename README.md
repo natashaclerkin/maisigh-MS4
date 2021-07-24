@@ -139,9 +139,6 @@ COMPLETE FEATURES LEFT TO IMPLEMENT
 
 # Information Architecture
 
-![Maisigh Schema](https://res.cloudinary.com/nclerkin/image.png "Maisigh Schema")
-
-
 ## Database Choice
 
 I chose to work with Django's default database **SQLite3** in the development of this project. During deployment, I switched to the Heroku add-on database, **PostgreSQL**.
