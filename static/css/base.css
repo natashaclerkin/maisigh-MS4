@@ -71,9 +71,8 @@ body {
     border: 1px solid black !important;
 }
 
-.delivery-col P {
-    padding: 5px 0px;
-    margin: 0;
+.delivery-col p {
+    font-size: 14px;
 }
 
 
@@ -571,7 +570,7 @@ a:link {
         font-size: 1rem;
     }
 
-    #delivery-banner h6 {
+    #delivery-banner p {
         font-size: .9rem;
     } 
 

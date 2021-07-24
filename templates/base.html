@@ -48,7 +48,7 @@
 
 <body>
 
-    <header>
+    <header class="sticky-top">
         
         <!-- Nav bar -->
         <nav class="navbar navbar-expand-xl navbar-light bg-white">
@@ -193,7 +193,7 @@
                         </div>
                     </li>
                     <!-- Bag -->
-                    <li class="mr-4 nav-item list-inline-item">
+                    <li class="mr-2 nav-item list-inline-item">
                         <a class="{% if grand_total %}font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center nav-bag">
                                 <div><i class="nav-link fas fa-shopping-bag fa-lg"></i></div>
@@ -210,7 +210,7 @@
 
         <!-- Free Delivery banner -->
 
-        <div class="container-flex delivery-container">
+        <div class="container-flex delivery-container overflow-hidden">
             <div id="delivery-banner" class="row text-center">
                 <div class="col delivery-col text-white text-uppercase"> 
                     <p class="my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
