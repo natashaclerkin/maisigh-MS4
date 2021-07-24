@@ -72,7 +72,7 @@ body {
 }
 
 .delivery-col p {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
@@ -571,7 +571,7 @@ a:link {
     }
 
     #delivery-banner p {
-        font-size: .9rem;
+        font-size: 12px;
     } 
 
     .btn.btn-outline-danger.rounded-0 {

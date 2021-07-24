@@ -215,7 +215,7 @@ The Testing process has been documented in this [TESTING.md file](TESTING.md "TE
 # Deployment
 
 
-## Local Deployment
+
 
 ### Requirements:
 - [Python 3](https://www.python.org) 
@@ -224,15 +224,16 @@ The Testing process has been documented in this [TESTING.md file](TESTING.md "TE
 - [Amazon AWS S3 Bucket](https://aws.amazon.com/)
 
 
+## Local Deployment
 ### How to clone Maisigh:
 ![Local Deployment](https://res.cloudinary.com/nclerkin/image/upload/v1626992601/deployment_s6vy1z.png "Local Deployment")
 1. Log in to GitHub and go to [this repository](https://github.com/natashaclerkin/maisigh-MS4).
 2. At the top of the repository, select **Code** and copy the **Clone URL**.
-3. In your IDE, open a Terminal window and change to the directory where you want the cloned directory to be made and type `git clone` and paste in `https://github.com/natashaclerkin/maisigh-MS4.git`.
+3. In the IDE, open a Terminal window and change to the directory where you want the cloned directory to be made and type `git clone` and paste in `https://github.com/natashaclerkin/maisigh-MS4.git`.
 4. Click enter and the project will be created and cloned locally.
 
 ### Working with the local copy:
-1. Create a file called `env.py` to hold your app's environment variables, which should contain the following:
+1. Create a file called `env.py` to hold the app's environment variables, which should contain the following:
 ```console
 import os
 
@@ -248,9 +249,9 @@ The webhook secret key can be found under 'Webhooks', an endpoint should then be
 ```
 <siteurl>/checkout/wh/
 ```
-Different endpoints are required for the local and deployed projects. Ensure the `STRIPE_WH_SECRET` is updated accordingly in env.py.
+Different endpoints are required for the local and deployed projects. Ensure the `STRIPE_WH_SECRET` is updated accordingly in `env.py`.
 
-2. Create a .gitignore file in the root directory of the project and add the env.py along with the below to prevent from being made public:
+2. Create a `.gitignore` file in the root directory of the project and add the `env.py`along with the below to prevent from being made public:
 ```
 core.Microsoft*
 core.mongo*
@@ -263,7 +264,7 @@ __pycache__/
 node_modules/
 db.json
 ```
-3. Install all the project dependencies from the terminal window of your IDE by typing
+3. Install all the project dependencies from the terminal window of the IDE by typing:
 ```
 pip3 install -r requirements.txt
 ```
@@ -283,10 +284,130 @@ python manage.py runserver
 
 ## Heroku Deployment
 
-To deploy the app to Heroku from the [repository](https://github.com/natashaclerkin/maisigh-MS4), the following steps were taken:
+To deploy the app to Heroku from the repository, the following steps were actioned:
 
 
-ADD ADDITIONAL INFO
+1. Log In to Heroku.
+2. Select **Create new app** from the dropdown menu in the dashboard.
+3. Choose a unique app name ( e.g.'maisigh-ms4') and selectthe closest locationn.
+4. Below **Resources** locate **Heroku Postgres** and add it to the app.
+5. In the CLI, install **dj_database_url** and **psycopg2** to use Postgres on the deployed site.
+```
+pip3 install dj_database_url
+pip3 install psycopg2
+```
+6. Log into Heroku via the CLI.
+```
+heroku login -i
+```
+7. Migrate the database into Postgres.
+```
+heroku run python manage.py migrate
+```
+8. Create a new superuser.
+```
+python manage.py createsuperuser
+```
+9. Install gunicorn.
+```
+pip3 install gunicorn
+```
+10. Freeze the app's requirements.
+```
+pip3 freeze > requirements.txt
+```
+11. Create a **Procfile** and include the following without leaving a blank line and the end of the file:
+```
+web: gunicorn maisigh-ms4.wsgi:application
+```
+12. Temporarily disable Heroku's static file collection.
+```
+heroku config:set DISABLE_COLLECTSTATIC=1 --app maisigh-ms4
+```
+13. Add the hostname of the Heroku app to `settings.py`.
+```
+ALLOWED_HOSTS = ['maisigh-ms4.herokuapp.com', 'localhost']
+```
+14. In Heroku, click the **Deploy** tab and choose GitHub under **Deployment method**.
+15. In **Connect to GitHub** enter the GitHub repo name and click **Connect** once found.
+16. Go to the **Settings** tab and under **Config Vars** choose **Reveal Config Vars**.
+17. Enter the following keys and values, some of which will differ from those in the `env.py`:
+
+|**Key**|**Value**|
+|:-----|:-----|
+|AWS_ACCESS_KEY_ID|`variable goes here`|
+|AWS_SECRET_ACCESS_KEY|`variable goes here`|
+|DATABASE_URL|`added by Heroku when Postgres installed`|
+|DISABLE_COLLECTSTATIC|`1` variable to be deleted later|
+|EMAIL_HOST_PASS|`variable goes here`|
+|EMAIL_HOST_USER|`variable goes here`|
+|SECRET_KEY|`variable goes here>`|
+|STRIPE_PUBLIC_KEY|`variable goes here`|
+|STRIPE_SECRET_KEY|`variable goes here`|
+|STRIPE_WH_SECRET|`different from env.py`|
+|USE_AWS|True|
+
+18. Return to the **Deploy** tab and under **Automatic deploys** select **Enable Automatic Deploys**.
+19. In the GitPod CLI add, commit and push all changes and Heroku will automatically deploy the app.
+```
+git add .
+git commit -m "Initial commit"
+git push
+```
+20. To launch the deployed site, select **Open App** from its page within Heroku.
+
+21. The media files for the deployed site are hosted in AWS S3 Bucket. In order to successfully use this service the following needs to be set:
+- **AWS account**
+- **Bucket Policy**
+- **Group**
+- **Access Policy**
+- **User**
+
+22. Once these settings are implemented, AWS needs to be connected to Django using the following steps:
+
+23. Install boto3, django-storages and update the `requirements.txt` file.
+```
+pip3 install boto3
+pip3 install django-storages
+pip3 freeze > requirements.txt
+```
+24. In `settings.py`, add storages to INSTALLED APPS as well as the code below. Then create a `custom_storages.py`file.
+
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'ffrccc-project'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+
+25. Insert the below values from the the AWS downloaded`.csv` file to the Heroku Convig Vars in Settings:
+
+|**Key**|**Value**|
+|:-----|:-----|
+|AWS_ACCESS_KEY_ID|`value goes here`|
+|AWS_SECRET_ACCESS_KEY|`value goes here`|
+
+26. Remove the `DISABLE_COLLECTSTATIC` variable from Convig Vars and deploy the Heroku app.
+27. In AWS, Create a new folder called `media` next to the `static` folder and upload any required media files to it, making sure they are publicly accessible in **Permissions**.
 
  
 [^ Back To Top ](#contents)
