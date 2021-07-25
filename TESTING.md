@@ -45,7 +45,7 @@ I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to che
 ![JS Validation Final Results](https://res.cloudinary.com/nclerkin/image/upload/v1627144551/js-val_koblsp.png "JS Validation Final Results") 
  
 Flake8 was used to check for any errors in the Python code, and refactored when required. Migrations and a few longer lines in Settings.py and additional linting errors were not refactored. All other Python code was passed through the [PEP8](http://pep8online.com/), where it passed with no errors.  
-
+![Pylint](https://res.cloudinary.com/nclerkin/image/upload/v1627170648/pylint_bosvh5.png "Pylint Refactoring") 
 ![Python validator](https://res.cloudinary.com/nclerkin/image/upload/v1627161814/pep8_ec0bex.jpg "Python Validation Final Results") 
  
 I constantly tested the code in [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) and often ran Lighthouse audits to identify and fix issues that affected the site's performance, accessibility and user experience and all results consistently scored between 90-100%. 
@@ -100,9 +100,18 @@ I constantly tested the code in [Chrome Dev Tools](https://developers.google.com
 
 # Bugs
 
-Minor bugs were found and resolved with **Devtools** like the below dropdown bugs.
+Minor bugs were found and resolved with **Devtools** like the below:
 
-INSERT IMAGES
+![Bug 1](https://res.cloudinary.com/nclerkin/image/upload/v1627170956/bug-6_q9gie5.png "Bug 1") 
+![Fix 1](https://res.cloudinary.com/nclerkin/image/upload/v1627170957/fix-6_nj56ek.png "Fix 1") 
+![Bug 2](https://res.cloudinary.com/nclerkin/image/upload/v1627170956/bug-2_nytclg.png "Bug 2") 
+![Fix 2](https://res.cloudinary.com/nclerkin/image/upload/v1627170956/fix-2_u0vcae.png "Fix 2") 
+![Bug 3](https://res.cloudinary.com/nclerkin/image/upload/v1627170956/bug-5_vk0vk6.png "Bug 3") 
+![Fix 3](https://res.cloudinary.com/nclerkin/image/upload/v1627170957/fix-5_jipqhq.png "Fix 3") 
+![Bug 4](https://res.cloudinary.com/nclerkin/image/upload/v1627170956/bug-3_o7x2pl.png "Bug 4") 
+![Fix 4](https://res.cloudinary.com/nclerkin/image/upload/v1627170956/fix-3_lmqxja.png "Fix 4") 
+![Bug 5](https://res.cloudinary.com/nclerkin/image/upload/v1627170956/bug-4_c5vqx0.png "Bug 5") 
+![Fix 5](https://res.cloudinary.com/nclerkin/image/upload/v1627170957/fix-4_jjgalr.png "Fix 5") 
 
 However, I did run into issues with the following:
 
