@@ -87,16 +87,24 @@ I constantly tested the code in [Chrome Dev Tools](https://developers.google.com
 
 ## Manual Feature Testing 
 
-|  FEATURE     |  ACTION & EXPECTED OUTCOME    |  OPEREATIONAL ON ALL DEVICES?  |
-| -------------------- |  --------------------|  ----------|
-| Search bar | **Search the database using the query as a keyword and returns any products that have the keyword in their name or description.**   |    Approved     |
-| Maisigh Logo | **Return the user to the home page.**   |    Approved      |
-| My Account (Authenticated user) | **Display a dropdown menu with the 'My Profile' and 'Logout' links. My profile will direct the user to their own profile page with previous orders if applicable. Logout will direct the user to the homepage.**   |    Approved     |
-| My Account (Non-authenticated user) | **Display a dropdown menu with the 'Register' and 'Login' links. Register will direct the user to the registration page and Login will direct the user to the login page**   |    Approved     |
-| My Account (Authenticated superuser) | **Display a dropdown menu with the same authenticated user links as above with the addition of 'Product Management' and 'Blog Management'. Blog management will direct the superuser to a page which allows them to add a new blog article. Product management will direct the superuser to a page which allows them to add a new product.**   |    Approved     |
-| Bag | **D.**   |    Approved     |
-
-
+|  FEATURE CATEGORY   |  FEATURE     |  ACTION & EXPECTED OUTCOME    |  OPEREATIONAL ON ALL DEVICES?  |
+| --------------------| -------------------- |  --------------------|  ----------|
+| Navigation | Search | **Search the database using the query as a keyword and returns any products that have the keyword in their name or description. On mobile devices, selecting the icon reveals a dropdown search bar, with the same functionality as the desktop search**   |    Approved     |
+| Navigation | Maisigh Logo | **Return the user to the home page.**   |    Approved      |
+| Navigation | My Account (Authenticated user) | **On mobile devices, the hamburger menu should activate the menu. Display a dropdown menu with the 'My Profile' and 'Logout' links. My profile will direct the user to their own profile page with previous orders if applicable. Logout will direct the user to the homepage.**   |    Approved     |
+| Navigation | My Account (Non-authenticated user) | **On mobile devices, the hamburger menu should activate the menu. Display a dropdown menu with the 'Register' and 'Login' links. Register will direct the user to the registration page and Login will direct the user to the login page**   |    Approved     |
+| Navigation | My Account (Authenticated superuser) | **On mobile devices, the hamburger menu should activate the menu. Display a dropdown menu with the same authenticated user links as above with the addition of 'Product Management' and 'Blog Management'. Blog management will direct the superuser to a page which allows them to add a new blog article. Product management will direct the superuser to a page which allows them to add a new product.**   |    Approved     |
+| Navigation | Bag | **With nothing in the bag, the price should display €0.00 in light green font. Add an item and the price should update and become bold. On mobile devices, the bag icon will take the user to their bag details.**   |    Approved     |
+| Navigation | Breadcrumbs | **Breadcrumbs present on desktop and mobile for collection page, category pages, individual product pages, blog page, individual blog post pages**   |    Approved     |
+| Footer | Social icons | **Direct the user to the appropriate social media sites.**   |    Approved     |
+| Footer | Contact Us | **Direct the user to the Contact Us submission form.**   |    Approved     |
+| Footer | About Us | **Direct the user to the Maisigh About Us page.**   |    Approved     |
+| Footer |Blog| **Direct the user to the Blog articles.**   |    Approved     |
+| Homepage |Carousel| **Three images present. On desktop devices, the title and CTAs are present. The 'Learn more about Maisigh' CTA should direct the user to the 'About Us' page. The 'Browse our collection' CTA should direct the user to the main collection products page. The 'Tag us in your Maisigh orders for freebies' CTA should divert the suer to the Blog.**   |    Approved     |
+| Products | Collection & Category Pages | **All images are links and should divert users to their corresponding detail page**|    Approved     |
+| Products | Collection & Category Pages for superusers | **Als well as the above, superusers should be able to edit or delete the specific product and should either divert them to the edit page or the deletion model respectively**|    Approved     |
+| Products | Individual Product Pages | **All pages on all devices should display the name, image, price, rating score, description, correct breadcrumb naming, 'keep shopping CTA'. 'add to bag CTA', 'add to wishlist CTA',  quantity selectors with the minus selector disabled if no products have been added, reviews section with 'add review CTA' and 'read review CTA'.**|    Approved     |
+| Products | Individual Product Pages for superusers | **As well as the above, superusers should be able to edit or delete the specific product and should either divert them to the edit page or the deletion model respectively.**|    Approved     |
 
 
 
