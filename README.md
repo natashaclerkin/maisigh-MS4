@@ -99,7 +99,7 @@ As a business/admin user, I would like to have access to all of the above as wel
 
 ## Design
 
-![IMAGE](https://res.cloudinary.com/nclerkin/image.png "IMAGE")
+![IMAGE](https://res.cloudinary.com/nclerkin/image/upload/v1627190869/banner.2PNG_fg3oiw.png "IMAGE")
 
 ### Typography
 I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about) for the headings and [Open Sans](https://fonts.google.com/specimen/Open+Sans/#about) as a supporting body font to achieve the desired clean-cut, fashion-forward brand image.
@@ -125,17 +125,43 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 [^ Back To Top ](#contents)
 
 # Features
-![IMAGE](https://res.cloudinary.com/nclerkin/image.png "IMAGE")
+![IMAGE](https://res.cloudinary.com/nclerkin/image/upload/v1627190831/fix-6.2_nowqyc.png "IMAGE")
+# Features
+
+
 ## Existing Features
-![IMAGE](https://res.cloudinary.com/nclerkin/image.png "IMAGE")
-COMPLETE FEATURES
+- A clean, simplistic responsive website.
+- Clear, sticky navigation if excessive scrolling is required so the nav is always available to the user. Breadcrumbs have been also implemented to reming the user view where they are and easily jump back to where they came from.
+- Monochrome palette to allow for jewellery and blog articles to focus and capture the user’s attention.
+- Carousel hitting the three main user stories, the 'about us' feature with the text 'sustainable Irish jewellery' with a CTA inviting users to instantly see what the website's purpose', the 'inspiration' feature which aims to entice users to browse the full collection and the third feature capturing the user's attention with the CTA displaying the action of obtaining freebies if the user helps with brand promotion.
+- ‘Trending’ section of jewellery on the homepage for inspiration.
+- Footer with blog contact us and social media links and brand footer with the main brand features.
+- Pages for ‘Collection’ and individual pre-filtered categories which can be further filtered by price, rating and alphabetically.
+- Search functionality that pulls from the data in the product description and name.
+- Individual product page containing a short description with relevant product information, image, price, rating, quantity selector, add to wishlist CTA, option for users to leave a review for a product or read reviews that have been left my past customers.
+- Simple user-friendly register & login pages. 
+- Confirm deletion modals for defensive programming.
+- Route protections to keep pages secure and redirect users that shouldn't have access.
+- User profile with access to previous order list, wishlist and the ability to update delevery information.
+- Toasts messaging upon form submissions and CRUD actions.
+- 404 & 500 custom built error pages to keep the user on the site when an error appears and to guide them back to the content.
+- A placeholder default image as a temporary fix if a product image isn't readily available.
+- Admin user has access to all products and can edit or remove them, they also have access to manage categories, reviews, orders and blog articles as well as edit them, remove them or add new ones.
+
 
 ## Features Left to Implement
-COMPLETE FEATURES LEFT TO IMPLEMENT
-additional photos
-cross-selling items
+- Maisigh newsletter sign up form to update users of new products and possible discounts.
+- Pagination for inspiration browsing when more products are added to the site
+- Complete Google & Social Newtwork Sign-in to allow users to sign in quicker and more securely
+- Additional categories as more products are added to the inventory and site
+- Automated review checks for admin before they are published live on the site or smart filtering for inappropriate content.
+- Enable comments and social media sharing functionality on each product and blog post.
+- Expand the admin profile to include usage and analytics reports to validate possible affiliate marketing.
+- Full contact form functionality that notifies the team when a query is received
+- Ability to add additional photos to the product page and implement zoom feature so the user can see closer detail.
+- Cross-selling products that are often purchased together and the ability for admin to change these products as required.
+- Allow email alerts to ping users of wishlist items when the item has beturned back in stock, running low in stock or has been recently discount to allure the user back to the site.
 
-![IMAGE](https://res.cloudinary.com/nclerkin/image.png "IMAGE")
 
 [^ Back To Top ](#contents)
 
