@@ -28,7 +28,7 @@ The brief was to build a full-stack site based around business logic used to con
 [Maisigh.ie](http://maisigh-ms4.herokuapp.com) is an Ecommerce site that allows users to locate sustainable, Irish jewellery. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
 
 Maisigh knows that simply having a good product is no longer enough to win a customer’s heart. They now want more than just quality, and demand products that align with their personal values. 
-In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Enter Maisigh. Maisigh is fully committed to providing Irish handcrafted jewellery with minimal impact on the environment. Customers will adore the selection of fashion-forward, ethically-sourced products that they will fall in love with.
+In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Enter Maisigh. Maisigh is fully committed to providing Irish handcrafted jewellery with minimal impact on the environment. The brand celebrates all things Irish by naming each hand-crafted piece after our own homegrown landmarks and attractions. Customers will adore the selection of fashion-forward, ethically-sourced Irish products that they will fall in love with. 
 
 My own goals as a developer creating this project were to: 
 - Develop a Ecommerce platform that enables the commercial process of buying and selling online. For customers, this would involve a search feature that allows users to locate desired products, a cart feature that lets them manage their order and a payment feature that allow them to purchase their items securely. For employees, this would allow admin users to add, update and delete product and blog content when required. 
@@ -131,22 +131,26 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 
 ## Existing Features
 - A clean, simplistic responsive website.
-- Clear, sticky navigation if excessive scrolling is required so the nav is always available to the user. Breadcrumbs have been also implemented to reming the user view where they are and easily jump back to where they came from.
+- The navbar features links to the whole collection and individual categories and the logo is placed in the centre. To the right of the logo there are three icons, one for search, one to represent a dropdown menu for 'my account', and a basket total which links to the shopping bag. The 'my account' dropdown reveals different options dependant on user priveleges. If a user is not signed in, 'login' and 'register' links display. Once a user is signed in, a link to 'my profile' and 'logout' are present. If the user has superuser privileges, they will also see a 'product management' and 'blog management' links to implement CRUD  functionality. The search and bag icons are always displayed even in mobile view as they carry the most frequest user interactions. The remaining less important links are accessed via the hamburger menu. Clear, sticky navigation if excessive scrolling is required so the nav is always available to the user. Breadcrumbs have been also implemented to remind the user view where they are and easily jump back to where they came from. 
 - Monochrome palette to allow for jewellery and blog articles to focus and capture the user’s attention.
 - Carousel hitting the three main user stories, the 'about us' feature with the text 'sustainable Irish jewellery' with a CTA inviting users to instantly see what the website's purpose', the 'inspiration' feature which aims to entice users to browse the full collection and the third feature capturing the user's attention with the CTA displaying the action of obtaining freebies if the user helps with brand promotion.
 - ‘Trending’ section of jewellery on the homepage for inspiration.
 - Footer with blog contact us and social media links and brand footer with the main brand features.
 - Pages for ‘Collection’ and individual pre-filtered categories which can be further filtered by price, rating and alphabetically.
 - Search functionality that pulls from the data in the product description and name.
-- Individual product page containing a short description with relevant product information, image, price, rating, quantity selector, add to wishlist CTA, option for users to leave a review for a product or read reviews that have been left my past customers.
+- Individual product page containing a short description with relevant product information, image, price, rating, quantity selector, add to wishlist CTA, option for users to leave a review for a product or read reviews that have been left my past customers. The user can click a button to reveal a dropdown of reviews. If there is more than one review, a stack of cards are displayed alternatively if no reviews are provided an individual card confirms that there are currently no reviews for the product and prompts the user to leave a review if they have purchased the product already. To add a review, the 'Add Review' CTA is available which directs the user to form submission. 
+- Shopping bag page that lists all items the user has added. The grid displays the name of the product, image, SKU number, quantity and the increment and decrement buttons and an update and delete order to allow the user to update their order easily.The bag subtotal, delivery charge and total is provided at the end of the page. If the user is close to the threshold for free delivery they will be prompted with the amount left to spend if they wish to avail of free delivery.
+- Checkout page with CTAs to allow user to adjust bag or proceed with their purchase. If the user is a new user, then the form will be empty. If the user has placed an order in the past or pre-entered their information on their profile, it will be pre-filled on the page. A checkbox allows the new user to save details to their profile for their next purchase. Once payment details have been inputted and submitted, a brand coloured overlay with a spinner appears to indicate the payment is process and for overall good UX.
+- Checkout success page confirming the order placed and CTA detailing how to avail of discount on next order.
+- Blog articles to inform users of products or discounts available.
 - Simple user-friendly register & login pages. 
 - Confirm deletion modals for defensive programming.
 - Route protections to keep pages secure and redirect users that shouldn't have access.
 - User profile with access to previous order list, wishlist and the ability to update delevery information.
-- Toasts messaging upon form submissions and CRUD actions.
+- Toasts messaging upon form submissions and CRUD actions for users and superusers. Four different types of toast messages: success, error, warning and info with different colours to reflect each type of message.
 - 404 & 500 custom built error pages to keep the user on the site when an error appears and to guide them back to the content.
 - A placeholder default image as a temporary fix if a product image isn't readily available.
-- Admin user has access to all products and can edit or remove them, they also have access to manage categories, reviews, orders and blog articles as well as edit them, remove them or add new ones.
+- Admin user has access to all products and can edit or remove them, they also have access to manage categories, reviews, orders and blog articles as well as edit them, remove them or add new ones. As well as in the admin portal, the edit/delete links are offered in each product card for ease of management.
 
 
 ## Features Left to Implement
