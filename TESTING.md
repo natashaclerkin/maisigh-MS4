@@ -85,10 +85,17 @@ I constantly tested the code in [Chrome Dev Tools](https://developers.google.com
 | Business/Admin User | **View analytics/reports for the checkout process so that I can highlight and fix any potential cart abandonment issues relating to the design and make necessary improvements.**  |   To be implemented in a future release  |    Not Approved     |
 
 
-## Manual Back End Feature Testing 
+## Manual Feature Testing 
 
-|  TEST      |  EXPECTED OUTCOME    |  RESULT    |
+|  FEATURE     |  ACTION & EXPECTED OUTCOME    |  OPEREATIONAL ON ALL DEVICES?  |
 | -------------------- |  --------------------|  ----------|
+| Search bar | **Search the database using the query as a keyword and returns any products that have the keyword in their name or description.**   |    Approved     |
+| Maisigh Logo | **Return the user to the home page.**   |    Approved      |
+| My Account (Authenticated user) | **Display a dropdown menu with the 'My Profile' and 'Logout' links. My profile will direct the user to their own profile page with previous orders if applicable. Logout will direct the user to the homepage.**   |    Approved     |
+| My Account (Non-authenticated user) | **Display a dropdown menu with the 'Register' and 'Login' links. Register will direct the user to the registration page and Login will direct the user to the login page**   |    Approved     |
+| My Account (Authenticated superuser) | **Display a dropdown menu with the same authenticated user links as above with the addition of 'Product Management' and 'Blog Management'. Blog management will direct the superuser to a page which allows them to add a new blog article. Product management will direct the superuser to a page which allows them to add a new product.**   |    Approved     |
+| Bag | **D.**   |    Approved     |
+
 
 
 

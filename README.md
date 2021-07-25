@@ -108,8 +108,8 @@ I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about)
 Font Awesome icons have been used for this project.
 
 ### Color Scheme
-The Maisigh brand monochrome colour scheme was implemented along with pops of natural fashion blush, sea blue and sage green to reflect the Irish and environmentally-friendly green products represented throughout the site.
-I wanted to keep the colour palette simplistic and clean to allow for the imagery from the accessories to stand out and inject the site with colour.
+The Maisigh brand monochrome colour scheme was implemented along with pops of natural fashion blush, sea blue and sage green to reflect the Irish and environmentally-friendly green products represented throughout the site. The primary CTA's green and blank and the secondary CTA's are black and white. When the user hovers over the CTAs the colours are inverted to indicate the action they are about to take.
+I wanted to keep the colour palette simplistic and clean to allow for the imagery from the jewellery to stand out and inject the site with colour.
 However, the colour red is used for error messages or promotion content sitewide to captivate the user's attention.
 
 I ended up creating and using the below palette once it had passed rigorous Accessibility testing in **A11y's Color Contrast Accessibility Validator**. 
@@ -132,6 +132,7 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 ## Existing Features
 - A clean, simplistic responsive website.
 - The navbar features links to the whole collection and individual categories and the logo is placed in the centre. To the right of the logo there are three icons, one for search, one to represent a dropdown menu for 'my account', and a basket total which links to the shopping bag. The 'my account' dropdown reveals different options dependant on user priveleges. If a user is not signed in, 'login' and 'register' links display. Once a user is signed in, a link to 'my profile' and 'logout' are present. If the user has superuser privileges, they will also see a 'product management' and 'blog management' links to implement CRUD  functionality. The search and bag icons are always displayed even in mobile view as they carry the most frequest user interactions. The remaining less important links are accessed via the hamburger menu. Clear, sticky navigation if excessive scrolling is required so the nav is always available to the user. Breadcrumbs have been also implemented to remind the user view where they are and easily jump back to where they came from. 
+- Free delivery over specific coded amount fixed underneath navbar as constant reminder to the user when browsing the site.
 - Monochrome palette to allow for jewellery and blog articles to focus and capture the user’s attention.
 - Carousel hitting the three main user stories, the 'about us' feature with the text 'sustainable Irish jewellery' with a CTA inviting users to instantly see what the website's purpose', the 'inspiration' feature which aims to entice users to browse the full collection and the third feature capturing the user's attention with the CTA displaying the action of obtaining freebies if the user helps with brand promotion.
 - ‘Trending’ section of jewellery on the homepage for inspiration.
