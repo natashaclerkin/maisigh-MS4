@@ -28,7 +28,7 @@ The brief was to build a full-stack site based around business logic used to con
 [Maisigh.ie](http://maisigh-ms4.herokuapp.com) is an Ecommerce site that allows users to locate sustainable, Irish jewellery. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
 
 Maisigh knows that simply having a good product is no longer enough to win a customer’s heart. They now want more than just quality, and demand products that align with their personal values. 
-In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Enter Maisigh. Maisigh is fully committed to providing Irish handcrafted jewellery with minimal impact on the environment. The brand celebrates all things Irish by naming each hand-crafted piece after our own homegrown landmarks and attractions. Customers will adore the selection of fashion-forward, ethically-sourced Irish products that they will fall in love with. 
+In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Enter Maisigh. Maisigh is fully committed to providing Irish handcrafted jewellery with minimal impact on the environment. The brand celebrates all things Irish by naming each hand-crafted piece after our own homegrown landmarks and attractions. Customers will adore the selection of fashion-forward, ethically sourced Irish products that they will fall in love with. 
 
 My own goals as a developer creating this project were to: 
 - Develop a Ecommerce platform that enables the commercial process of buying and selling online. For customers, this would involve a search feature that allows users to locate desired products, a cart feature that lets them manage their order and a payment feature that allow them to purchase their items securely. For employees, this would allow admin users to add, update and delete product and blog content when required. 
@@ -49,7 +49,7 @@ My own goals as a developer creating this project were to:
 - Purchase desired items by a secure means.
 - Easily find inspiration for an accessory or locate a specific jewellery piece based on type, price, alphabetically, rating or from a personal wish list. 
 - Share desired items or purchases with social following or with friends directly.
-- Have an enjoyable experience on primary visit as well as future visits.
+- Have an enjoyable experience on the primary visit as well as future visits.
 
 
 ### Site owner's goal:
@@ -66,14 +66,14 @@ My own goals as a developer creating this project were to:
 
 As a new user, I would like to:
 - View a visually clean and appealing homepage so that I can instantly understand the purpose of the site and navigate its offering easily.
-- Access the site from any mobile, tablet or desktop devices so that I can have an equally enjoyable experience regardless of the selected device/platform.
+- Access the site from any mobile, tablet or desktop device so that I can have an equally enjoyable experience regardless of the selected device/platform.
 - View content without the requirement to register so that I can quickly locate a specific jewellery piece.
 - Browse and filter jewellery by product type, rating, name or price so that I can easily find inspiration for a jewellery piece.
 - View a list of items by product type/name/details keyword search criteria so that I can quickly locate a specific jewellery piece.
-- Learn more about where the products come from so that I can trust that I'm purchasing ethically-sourced products supporting the environment.
-- View more specific product information about a particular jewellery piecesuch as materials used, dimensions etc.
+- Learn more about where the products come from so that I can trust that I'm purchasing ethically sourced products supporting the environment.
+- View more specific product information about a particular jewellery piece such as materials used, dimensions etc.
 - View the total cost of a potential order containing multiple products.
-- Register a profile easily so that I can store address and billing information to streamline order process on future visits.
+- Register a profile easily so that I can store address and billing information to streamline the order process on future visits.
 
 As a returning user, I would like to:
 - Log in and out without encountering issues so that I can have an enjoyable user experience.
@@ -131,23 +131,23 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 
 ## Existing Features
 - A clean, simplistic responsive website.
-- The navbar features links to the whole collection and individual categories and the logo is placed in the centre. To the right of the logo there are three icons, one for search, one to represent a dropdown menu for 'my account', and a basket total which links to the shopping bag. The 'my account' dropdown reveals different options dependant on user priveleges. If a user is not signed in, 'login' and 'register' links display. Once a user is signed in, a link to 'my profile' and 'logout' are present. If the user has superuser privileges, they will also see a 'product management' and 'blog management' links to implement CRUD  functionality. The search and bag icons are always displayed even in mobile view as they carry the most frequest user interactions. The remaining less important links are accessed via the hamburger menu. Clear, sticky navigation if excessive scrolling is required so the nav is always available to the user. Breadcrumbs have been also implemented to remind the user view where they are and easily jump back to where they came from. 
-- Free delivery over specific coded amount fixed underneath navbar as constant reminder to the user when browsing the site.
+- The navbar features links to the whole collection and individual categories and the logo is placed in the centre. To the right of the logo, there are three icons, one for search, one to represent a dropdown menu for 'my account', and a basket total that links to the shopping bag. The 'my account' dropdown reveals different options dependant on user privileges. If a user is not signed in, 'login' and 'register' links display. Once a user is signed in, a link to 'my profile' and 'logout' are present. If the user has superuser privileges, they will also see 'product management' and 'blog management' links to implement CRUD  functionality. The search and bag icons are always displayed even in mobile view as they carry the most frequent user interactions. The remaining less important links are accessed via the hamburger menu. Clear, sticky navigation if excessive scrolling is required so the nav is always available to the user. Breadcrumbs have been also implemented to remind the user to view where they are and easily jump back to where they came from. 
+- Free delivery over specific coded amount fixed underneath navbar as a constant reminder to the user when browsing the site.
 - Monochrome palette to allow for jewellery and blog articles to focus and capture the user’s attention.
 - Carousel hitting the three main user stories, the 'about us' feature with the text 'sustainable Irish jewellery' with a CTA inviting users to instantly see what the website's purpose', the 'inspiration' feature which aims to entice users to browse the full collection and the third feature capturing the user's attention with the CTA displaying the action of obtaining freebies if the user helps with brand promotion.
 - ‘Trending’ section of jewellery on the homepage for inspiration.
 - Footer with blog contact us and social media links and brand footer with the main brand features.
-- Pages for ‘Collection’ and individual pre-filtered categories which can be further filtered by price, rating and alphabetically.
+- Pages for ‘Collection’ and individual pre-filtered categories can be further filtered by price, rating and alphabetically.
 - Search functionality that pulls from the data in the product description and name.
-- Individual product page containing a short description with relevant product information, image, price, rating, quantity selector, add to wishlist CTA, option for users to leave a review for a product or read reviews that have been left my past customers. The user can click a button to reveal a dropdown of reviews. If there is more than one review, a stack of cards are displayed alternatively if no reviews are provided an individual card confirms that there are currently no reviews for the product and prompts the user to leave a review if they have purchased the product already. To add a review, the 'Add Review' CTA is available which directs the user to form submission. 
-- Shopping bag page that lists all items the user has added. The grid displays the name of the product, image, SKU number, quantity and the increment and decrement buttons and an update and delete order to allow the user to update their order easily.The bag subtotal, delivery charge and total is provided at the end of the page. If the user is close to the threshold for free delivery they will be prompted with the amount left to spend if they wish to avail of free delivery.
-- Checkout page with CTAs to allow user to adjust bag or proceed with their purchase. If the user is a new user, then the form will be empty. If the user has placed an order in the past or pre-entered their information on their profile, it will be pre-filled on the page. A checkbox allows the new user to save details to their profile for their next purchase. Once payment details have been inputted and submitted, a brand coloured overlay with a spinner appears to indicate the payment is process and for overall good UX.
-- Checkout success page confirming the order placed and CTA detailing how to avail of discount on next order.
+- Individual product page containing a short description with relevant product information, image, price, rating, quantity selector, add to wishlist CTA, option for users to leave a review for a product or read reviews that have been left by past customers. The user can click a button to reveal a dropdown of reviews. If there is more than one review, a stack of cards are displayed alternatively if no reviews are provided an individual card confirms that there are currently no reviews for the product and prompts the user to leave a review if they have purchased the product already. To add a review, the 'Add Review' CTA is available which directs the user to form submission. 
+- Shopping bag page that lists all items the user has added. The grid displays the name of the product, image, SKU number, quantity and the increment and decrement buttons and an update and delete link to allow the user to update their order easily. The bag subtotal, delivery charge and total is provided at the end of the page. If the user is close to the threshold for free delivery they will be prompted with the amount left to spend if they wish to avail of free delivery.
+- Checkout page with CTAs to allow the user to adjust the bag or proceed with their purchase. If the user is new, then the form will be empty. If the user has placed an order in the past or pre-entered their information on their profile, it will be pre-filled on the page. A checkbox allows the new user to save details to their profile for their next purchase. Once payment details have been inputted and submitted, a brand coloured overlay with a spinner appears to indicate the payment is processed and for overall good UX.
+- Checkout success page confirming the order placed and CTA detailing how to avail of a discount on the next order.
 - Blog articles to inform users of products or discounts available.
 - Simple user-friendly register & login pages. 
 - Confirm deletion modals for defensive programming.
 - Route protections to keep pages secure and redirect users that shouldn't have access.
-- User profile with access to previous order list, wishlist and the ability to update delevery information.
+- User profile with access to the previous order list, wishlist and the ability to update delivery information.
 - Toasts messaging upon form submissions and CRUD actions for users and superusers. Four different types of toast messages: success, error, warning and info with different colours to reflect each type of message.
 - 404 & 500 custom built error pages to keep the user on the site when an error appears and to guide them back to the content.
 - A placeholder default image as a temporary fix if a product image isn't readily available.
@@ -157,15 +157,15 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 ## Features Left to Implement
 - Maisigh newsletter sign up form to update users of new products and possible discounts.
 - Pagination for inspiration browsing when more products are added to the site
-- Complete Google & Social Newtwork Sign-in to allow users to sign in quicker and more securely
+- Complete Google & Social Network Sign-in to allow users to sign in quicker and more securely
 - Additional categories as more products are added to the inventory and site
 - Automated review checks for admin before they are published live on the site or smart filtering for inappropriate content.
 - Enable comments and social media sharing functionality on each product and blog post.
 - Expand the admin profile to include usage and analytics reports to validate possible affiliate marketing.
 - Full contact form functionality that notifies the team when a query is received
-- Ability to add additional photos to the product page and implement zoom feature so the user can see closer detail.
+- Ability to add additional photos to the product page and implement a zoom feature so the user can see closer detail.
 - Cross-selling products that are often purchased together and the ability for admin to change these products as required.
-- Allow email alerts to ping users of wishlist items when the item has beturned back in stock, running low in stock or has been recently discount to allure the user back to the site.
+- Allow email alerts to ping users of wishlist items when the item has returned in stock, running low in stock or has been recently discounted to allure the user back to the site.
 
 
 [^ Back To Top ](#contents)
@@ -177,7 +177,7 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 I chose to work with Django's default database **SQLite3** in the development of this project. During deployment, I switched to the Heroku add-on database, **PostgreSQL**.
 
 ## Data Modeling
-I used Django Allauth and it's default `django.contrib.auth.models` for the **User model** in the profile app.
+I used Django Allauth and its default `django.contrib.auth.models` for the **User model** in the profile app.
 
 The Product and Checkout apps are structured on the CI walkthrough project, Boutique Ado.
 
@@ -338,7 +338,7 @@ CONTINUE
 [^ Back To Top ](#contents)
 
 # Testing
-The Testing process has been documented in this [TESTING.md file](TESTING.md "TESTING.md File")
+The Testing Process has been documented in this [TESTING.md file](TESTING.md "TESTING.md File")
 
 [^ Back To Top ](#contents)
 
@@ -381,7 +381,7 @@ The webhook secret key can be found under 'Webhooks', an endpoint should then be
 ```
 Different endpoints are required for the local and deployed projects. Ensure the `STRIPE_WH_SECRET` is updated accordingly in `env.py`.
 
-2. Create a `.gitignore` file in the root directory of the project and add the `env.py`along with the below to prevent from being made public:
+2. Create a `.gitignore` file in the root directory of the project and add the `env.py`along with the below to prevent it from being made public:
 ```
 core.Microsoft*
 core.mongo*
@@ -419,7 +419,7 @@ To deploy the app to Heroku from the repository, the following steps were action
 
 1. Log In to Heroku.
 2. Select **Create new app** from the dropdown menu in the dashboard.
-3. Choose a unique app name ( e.g.'maisigh-ms4') and selectthe closest locationn.
+3. Choose a unique app name ( e.g.'maisigh-ms4') and select the closest location.
 4. Below **Resources** locate **Heroku Postgres** and add it to the app.
 5. In the CLI, install **dj_database_url** and **psycopg2** to use Postgres on the deployed site.
 ```
@@ -537,7 +537,7 @@ if 'USE_AWS' in os.environ:
 |AWS_SECRET_ACCESS_KEY|`value goes here`|
 
 26. Remove the `DISABLE_COLLECTSTATIC` variable from Convig Vars and deploy the Heroku app.
-27. In AWS, Create a new folder called `media` next to the `static` folder and upload any required media files to it, making sure they are publicly accessible in **Permissions**.
+27. In AWS, create a new folder called `media` next to the `static` folder and upload any required media files to it, making sure they are publicly accessible in **Permissions**.
 
  
 [^ Back To Top ](#contents)
@@ -600,6 +600,6 @@ I would like to thank my mentor Guido Cecilio for his continued support and over
 
 # Disclaimer
 
-If there are any issues with the copyright of content, please contact me directly and I will amend it as soon as possible. This project is for educational purposes only.
+If there are any issues with the copyright of the content, please contact me directly and I will amend it as soon as possible. This project is for educational purposes only.
 
 [^ Back To Top ](#contents) 
