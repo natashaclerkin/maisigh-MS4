@@ -1,19 +1,18 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from products.models import Product
+from profiles.models import UserProfile
 from .forms import ReviewForm
 from .models import Review
-from profiles.models import UserProfile
+
 
 
 # Create your views here.
 
-
+@login_required
 def add_review(request, product_id):
-    """
-    Add a product review
-    """
     product = get_object_or_404(Product, pk=product_id)
     user_profile = get_object_or_404(UserProfile, user=request.user)
     if request.method == 'POST':
