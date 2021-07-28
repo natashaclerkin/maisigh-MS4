@@ -11,7 +11,6 @@
 </div>
 {% endblock %}
 {% block content %}
-
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
@@ -35,60 +34,58 @@
             </div>
         </div>
     </div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="mx-auto">
-                <!-- Blog image -->
-                {% if blog.image %}
-                <img src="{{ blog.image.url }}" alt="{{ blog.name }}" class="card-img">
-                {% else %}
-                <img src="{{ MEDIA_URL }}noimage.jpg" alt="{{ blog.name }}" class="img-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="mx-auto">
+                    <!-- Blog image -->
+                    {% if blog.image %}
+                    <img src="{{ blog.image.url }}" alt="{{ blog.name }}" class="card-img">
+                    {% else %}
+                    <img src="{{ MEDIA_URL }}noimage.jpg" alt="{{ blog.name }}" class="img-fluid">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <!-- Blog title -->
+                <h2 class="text-uppercase blog-details-title">{{ blog.title }}</h2>
+                <!-- Blog author and date -->
+                <p class="text-muted">Written by <strong>{{ blog.author }} | {{ blog.created_on}}</strong></p>
+                <!-- Superuser edit/delete buttons -->
+                {% if request.user.is_superuser %}
+                <small class="ml-2">
+                <a href="{% url 'edit_blog' blog.slug %}">Edit</a> |
+                <a href="#deleteBlog{{ blog.slug }}" class="text-danger" data-toggle="modal" >Delete</a>
+                </small>
                 {% endif %}
+                <!-- Blog content -->
+                <p class="blog-content mb-5">{{ blog.body }}</p>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center mt-4">
-            <!-- Blog title -->
-            <h2 class="text-uppercase blog-details-title">{{ blog.title }}</h2>
-            <!-- Blog author and date -->
-            <p class="text-muted">Written by <strong>{{ blog.author }} | {{ blog.created_on}}</strong></p>
-            <!-- Superuser edit/delete buttons -->
-            {% if request.user.is_superuser %}
-            <small class="ml-2">
-            <a href="{% url 'edit_blog' blog.slug %}">Edit</a> |
-            <a href="#deleteBlog{{ blog.slug }}" class="text-danger" data-toggle="modal" >Delete</a>
-            </small>
-            {% endif %}
-            <!-- Blog content -->
-            <p class="blog-content mb-5">{{ blog.body }}</p>
-        </div>
-    </div>
-    <!-- Delete Modal -->
-    <div class="modal fade text-center" id="deleteBlog{{ blog.slug }}" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h5 class="modal-title" id="deleteBlog{{ blog.slug }}Label">
-                        Are you sure you want to delete <br>" {{ blog.title }} " ? <br>
-                    </h5>
-                    <p>You will not be able to undo this action.</p>
-                </div>
-                <div class="modal-footer modal-btns">
-                    <button type="button" class="btn text-uppercase cta-black" data-dismiss="modal">Cancel</button>
-                    <a href="{% url 'delete_blog' blog.slug %}" class="btn btn-outline-danger rounded-0 text-uppercase">
-                    <span>Delete</span>                      
-                    </a>
+        <!-- Delete Modal -->
+        <div class="modal fade text-center" id="deleteBlog{{ blog.slug }}" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="deleteBlog{{ blog.slug }}Label">
+                            Are you sure you want to delete <br>" {{ blog.title }} " ? <br>
+                        </h5>
+                        <p>You will not be able to undo this action.</p>
+                    </div>
+                    <div class="modal-footer modal-btns">
+                        <button type="button" class="btn text-uppercase cta-black" data-dismiss="modal">Cancel</button>
+                        <a href="{% url 'delete_blog' blog.slug %}" class="btn btn-outline-danger rounded-0 text-uppercase">
+                        <span>Delete</span>                      
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 {% endblock %}

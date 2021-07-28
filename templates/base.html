@@ -1,88 +1,134 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
-
-<head>
-
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    {% endblock %}
-
-    {% block extra_meta %}
-    {% endblock %}
-
-    {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
-
-    {% block extra_css %}
-    {% endblock %}
-
-    {% block corejs %}
-    <script src="https://kit.fontawesome.com/9885a929c9.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-    <!-- Stripe -->
-    <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
-
-    {% block extra_js %}
-    {% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}favicon.ico">
-    <title>Maisigh.ie {% block extra_title %}{% endblock %}</title>
-</head>
-
-<body>
-
-    <header class="sticky-top">
-        
-        <!-- Nav bar -->
-        <nav class="navbar navbar-expand-xl navbar-light bg-white">
-            <!-- Toggler Button -->
-            <div class="col-md-4 toggler-col">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <head>
+        {% block meta %}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% endblock %}
+        {% block extra_meta %}
+        {% endblock %}
+        {% block corecss %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% endblock %}
+        {% block extra_css %}
+        {% endblock %}
+        {% block corejs %}
+        <script src="https://kit.fontawesome.com/9885a929c9.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- Stripe -->
+        <script src="https://js.stripe.com/v3/"></script>
+        {% endblock %}
+        {% block extra_js %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}favicon.ico">
+        <title>Maisigh.ie {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header class="sticky-top">
+            <!-- Nav bar -->
+            <nav class="navbar navbar-expand-xl navbar-light bg-white">
+                <!-- Toggler Button -->
+                <div class="col-md-4 toggler-col">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Main Nav Items -->
-                <div class="col-4 collapse navbar-collapse nav-item-list" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav nav-font justify-content-start">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-label="Collection" href="{% url 'products' %}">Collection</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-label="Necklaces" href="{% url 'products' %}?category=necklaces">Necklaces</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-label="Bracelets" href="{% url 'products' %}?category=bracelets">Bracelets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-label="Earrings" href="{% url 'products' %}?category=earrings">Earrings</a>
-                        </li>
-                        <!-- My account & search section mobile -->
-                        <li class="nav-item dropdown my-account-mobile nav-font">
-                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" id="myaccount"
-                                aria-haspopup="true" aria-expanded="false">
-                                <div>
-                                    <div class="d-xl-block">
-                                        My Account<i class="nav-link fas fa-user fa-lg ml-3"></i>
+                    </button>
+                    <!-- Main Nav Items -->
+                    <div class="col-4 collapse navbar-collapse nav-item-list" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav nav-font justify-content-start">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-label="Collection" href="{% url 'products' %}">Collection</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-label="Necklaces" href="{% url 'products' %}?category=necklaces">Necklaces</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-label="Bracelets" href="{% url 'products' %}?category=bracelets">Bracelets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-label="Earrings" href="{% url 'products' %}?category=earrings">Earrings</a>
+                            </li>
+                            <!-- My account & search section mobile -->
+                            <li class="nav-item dropdown my-account-mobile nav-font">
+                                <a class="nav-link" data-toggle="dropdown" href="#" role="button" id="myaccount"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div>
+                                        <div class="d-xl-block">
+                                            My Account<i class="nav-link fas fa-user fa-lg ml-3"></i>
+                                        </div>
                                     </div>
+                                </a>
+                                <div class="dropdown-menu border-0" aria-labelledby="myaccount">
+                                    {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item">Product Management</a>
+                                    <a href="{% url 'add_blog' %}" aria-label="Add a Blog Post" class="dropdown-item">Blog Management</a>
+                                    {% endif %}
+                                    <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'wishlist' %}" aria-label="Wish List" class="dropdown-item">Wish List</a>
+                                    <a href="{% url 'account_logout' %}" aria-label="Log out" class="dropdown-item">Logout</a>
+                                    {% else %}
+                                    <a href="{% url 'account_signup' %}" aria-label="Register"
+                                        class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" aria-label="Login" class="dropdown-item">Login</a>
+                                    {% endif %}
                                 </div>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Logo -->
+                <div class="col-md-4 navbar-brand-col text-center">
+                    <a class="navbar-brand" aria-label="Home" href="{% url 'home' %}">MAISIGH</a>
+                </div>
+                <!-- Search Cart & My Account Dropdown -->
+                <div class="col-md-4 nav-icons">
+                    <ul class="nav-bag-account nav-font navbar-nav justify-content-end">
+                        <!-- Search -->
+                        <li class="nav-item dropdown search-desktop">
+                            <a class="nav-link" href="#" id="searchdesktop" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <div class="text-center">
+                                    <i class="nav-link fas fa-search fa-lg"></i>
+                                </div>
+                                <p class="d-none d-xl-block">Search</p>
+                            </a>
+                            <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="searchdesktop">
+                                <form class="form" method="GET" action="{% url 'products' %}">
+                                    <div class="input-group w-100">
+                                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                                            placeholder="Search Maisigh">
+                                        <div class="input-group-append">
+                                            <button
+                                                class="form-control form-control btn btn-black border border-black rounded-0"
+                                                type="submit">
+                                            <span class="icon">
+                                            <i class="fas fa-search"></i>
+                                            </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <!-- My Account -->
+                        <li class="nav-item dropdown my-account">
+                            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false">
+                                <div class="text-center">
+                                    <i class="nav-link fas fa-user fa-lg"></i>
+                                </div>
+                                <p class="d-none d-xl-block">My Account</p>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="myaccount">
                                 {% if request.user.is_authenticated %}
@@ -92,222 +138,107 @@
                                 {% endif %}
                                 <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'wishlist' %}" aria-label="Wish List" class="dropdown-item">Wish List</a>
-                                <a href="{% url 'account_logout' %}" aria-label="Log out" class="dropdown-item">Logout</a>
+                                <a href="{% url 'account_logout' %}" aria-label="Logout" class="dropdown-item">Logout</a>
                                 {% else %}
                                 <a href="{% url 'account_signup' %}" aria-label="Register"
                                     class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" aria-label="Login" class="dropdown-item">Login</a>
                                 {% endif %}
                             </div>
-                        <!-- Search 
-                        <li class="nav-item dropdown search-mobile nav-font">
-                            <a class="nav-link" href="#" id="searchmobile" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <div>
-                                    <p class="d-xl-block">Search
-                                        <i class="nav-link fas fa-search fa-lg"></i>
+                        </li>
+                        <!-- Bag -->
+                        <li class="mr-2 nav-item list-inline-item">
+                            <a class="{% if grand_total %}font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_bag' %}">
+                                <div class="text-center nav-bag">
+                                    <div><i class="nav-link fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="d-none d-xl-block bag-text">
+                                        {% if grand_total %} €{{ grand_total|floatformat:2 }}
+                                        {% else %} €0.00 {% endif %}
                                     </p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="searchmobile">
-                                <form class="form" method="GET" action="">
-                                    <div class="input-group w-100">
-                                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                                            placeholder="Search Maisigh">
-                                        <div class="input-group-append">
-                                            <button
-                                                class="form-control form-control btn btn-black border border-black rounded-0"
-                                                type="submit">
-                                                <span class="icon">
-                                                    <i class="fas fa-search"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
-            </div>
-         
-
-            <!-- Logo -->
-            <div class="col-md-4 navbar-brand-col text-center">
-                <a class="navbar-brand" aria-label="Home" href="{% url 'home' %}">MAISIGH</a>
-            </div>
-
-            <!-- Search Cart & My Account Dropdown -->
-            <div class="col-md-4 nav-icons">
-                <ul class="nav-bag-account nav-font navbar-nav justify-content-end">
-                    <!-- Search -->
-                    <li class="nav-item dropdown search-desktop">
-                        <a class="nav-link" href="#" id="searchdesktop" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="text-center">
-                                <i class="nav-link fas fa-search fa-lg"></i>
-                            </div>
-                            <p class="d-none d-xl-block">Search</p>
-                        </a>
-                        <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="searchdesktop">
-                            <form class="form" method="GET" action="{% url 'products' %}">   
-                                <div class="input-group w-100">
-                                    <input class="form-control border border-black rounded-0" type="text" name="q"
-                                        placeholder="Search Maisigh">
-                                    <div class="input-group-append">
-                                        <button
-                                            class="form-control form-control btn btn-black border border-black rounded-0"
-                                            type="submit">
-                                            <span class="icon">
-                                                <i class="fas fa-search"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-                    <!-- My Account -->
-                    <li class="nav-item dropdown my-account">
-                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="text-center">
-                                <i class="nav-link fas fa-user fa-lg"></i>
-                            </div>
-                            <p class="d-none d-xl-block">My Account</p>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="myaccount">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item">Product Management</a>
-                            <a href="{% url 'add_blog' %}" aria-label="Add a Blog Post" class="dropdown-item">Blog Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'wishlist' %}" aria-label="Wish List" class="dropdown-item">Wish List</a>
-                            <a href="{% url 'account_logout' %}" aria-label="Logout" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" aria-label="Register"
-                                class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" aria-label="Login" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <!-- Bag -->
-                    <li class="mr-2 nav-item list-inline-item">
-                        <a class="{% if grand_total %}font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_bag' %}">
-                            <div class="text-center nav-bag">
-                                <div><i class="nav-link fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="d-none d-xl-block bag-text">
-                                    {% if grand_total %} €{{ grand_total|floatformat:2 }}
-                                    {% else %} €0.00 {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Free Delivery banner -->
-
-        <div class="container-flex delivery-container overflow-hidden">
-            <div id="delivery-banner" class="row text-center">
-                <div class="col delivery-col text-white text-uppercase"> 
-                    <p class="my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
+            </nav>
+            <!-- Free Delivery banner -->
+            <div class="container-flex delivery-container overflow-hidden">
+                <div id="delivery-banner" class="row text-center">
+                    <div class="col delivery-col text-white text-uppercase">
+                        <p class="my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-    </header>
-
-
-
-
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
+        </header>
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
             {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
             {% endwith %}
-        {% endfor %}
-    </div>
-    {% endif %}
-
-
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-
-
-    
-        
-		
-
-
-            <!-- Footer -->
-    <footer class="text-center mt-auto">
-        <div class="container-fluid brand-footer text-center">
-			
-            <div class="maisigh-icons row justify-content-md-center">
-                <div class="col-4 col-md-3">           
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% block page_header %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+        <!-- Footer -->
+        <footer class="text-center mt-auto">
+            <div class="container-fluid brand-footer text-center">
+                <div class="maisigh-icons row justify-content-md-center">
+                    <div class="col-4 col-md-3">           
                         <i class="fas fa-recycle"></i>
-                      ECO-FRIENDLY
-              </div>
-              <div class="col-4 col-md-3">
-                <i class="fas fa-flag"></i>
-                     PROUDLY IRISH   
-              </div>
-              <div class="col-4 col-md-3">
-                <i class="fas fa-shipping-fast"></i>
-                     FREE SHIPPING
-              </div>
-            </div>
-    </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <ul class="text-uppercase footer-links list-unstyled list-inline mt-2 mb-0">
-                        <li class="list-inline-item"><a href="{% url 'about' %}">About Us</a></li>
-                        <li class="list-inline-item"><a href="{% url 'blogs' %}">Blog</a></li>
-                        <li class="list-inline-item"><a href="{% url 'contact' %}">Contact us</a></li>
-                    </ul>
+                        ECO-FRIENDLY
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <i class="fas fa-flag"></i>
+                        PROUDLY IRISH   
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <i class="fas fa-shipping-fast"></i>
+                        FREE SHIPPING
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                    <ul class="social-links list-inline">
-                        <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><i class="fab fa-instagram fa-2x"></i></a></li>
-                        <li class="list-inline-item me-4"><a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i class="fab fa-facebook fa-2x"></i></a></li>
-                        <li class="list-inline-item me-4"><a href="https://twitter.com/" target="_blank" rel="noreferrer"><i class="fab fa-twitter fa-2x"></i></a></li>
-                    </ul>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <ul class="text-uppercase footer-links list-unstyled list-inline mt-2 mb-0">
+                            <li class="list-inline-item"><a href="{% url 'about' %}">About Us</a></li>
+                            <li class="list-inline-item"><a href="{% url 'blogs' %}">Blog</a></li>
+                            <li class="list-inline-item"><a href="{% url 'contact' %}">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <ul class="social-links list-inline">
+                            <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><i class="fab fa-instagram fa-2x"></i></a></li>
+                            <li class="list-inline-item me-4"><a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i class="fab fa-facebook fa-2x"></i></a></li>
+                            <li class="list-inline-item me-4"><a href="https://twitter.com/" target="_blank" rel="noreferrer"><i class="fab fa-twitter fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="container-fluid text-center">
+            <div class="row copyright">
+                <div class="col-12">
+                    <p class="m-0"><small>Copyright © 2021 Maisigh</small></p>
                 </div>
             </div>
         </div>
-    </footer>
-    <div class="container-fluid text-center">
-        <div class="row copyright">
-            <div class="col-12">
-                <p class="m-0"><small>Copyright © 2021 Maisigh</small></p>
-            </div>
-        </div>
-    </div>
-
-    {% block postloadjs %}
-    <script>
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
-
-</body>
-
+        {% block postloadjs %}
+        <script>
+            $('.toast').toast('show');
+        </script>
+        {% endblock %}
+    </body>
 </html>

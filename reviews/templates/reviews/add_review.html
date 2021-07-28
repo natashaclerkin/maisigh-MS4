@@ -1,34 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
-
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="text-uppercase mb-4">Add Review</h2>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <form action="{% url 'add_review' product.id %}" method="POST" class="form mb-2">
-                    {% csrf_token %}
-                        {{ form | crispy }}
-                    <div class="text-right">
-                        <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-black rounded-0 mb-5">Cancel</a>
-                        <button type="submit" class="btn cta-green rounded-0 mb-5">Add Review</button>
-                    </div>
-                </form>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="text-uppercase mb-4">Add Review</h2>
+            <hr>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <form action="{% url 'add_review' product.id %}" method="POST" class="form mb-2">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-right">
+                    <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-black rounded-0 mb-5">Cancel</a>
+                    <button type="submit" class="btn cta-green rounded-0 mb-5">Add Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -149,7 +149,7 @@ However, I did run into issues with the following:
 
 !["Remaining Bug 2](https://res.cloudinary.com/nclerkin/image/upload/v1627375625/toast_ryd4cz.png "Remaining Bug 2") 
 
-- There are minor positioning-related bugs that I would like to fix such as the below which merit fixing in the next release when more time is available to implement the fixes.
+- There are minor positioning-related bugs that I would like to fix such as the below and search dropdown which merit fixing in the next release when more time is available to implement the fixes.
 
 !["Remaining Bug 3](https://res.cloudinary.com/nclerkin/image/upload/v1627375407/bug-8_ucoojq.png "Remaining Bug 3") 
 

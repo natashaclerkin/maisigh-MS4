@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
-
 {% block content %}
-
-    <!-- Breadcrumbs--->
+<!-- Breadcrumbs--->
 <div class="container">
     <div class="row shop-top-row">
         <div class="col-12">
@@ -23,156 +20,150 @@
                     <span class="bar-pink">|</span>
                     <a href="{% url 'products' %}?category={{ product.category }}"
                         class="breadcrumb-link">{{ product.category.friendly_name }}</a>
-                        <span class="bar-pink">|</span>
+                    <span class="bar-pink">|</span>
                     <span class="text-muted active-breadcrumb">{{ product.name }}</span>
                 </p>
             </div>
         </div>
     </div>
 </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                    
-
-                
-                <div class="image-container my-5">
-                    {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
-                </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                </a>
+                {% endif %}
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <p class="product-title mb-0">{{ product.name }}</p>
-                    <p class="mt-2 mb-2 text-left">€{{ product.price }}</p>
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                            <a href="#deleteProduct{{ product.id }}" class="text-danger" data-toggle="modal" >Delete</a>
-                        </small>
-                    {% endif %}
-                    <p class="mt-3">{{ product.description }}</p>
-                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row">
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black rounded-0" 
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control qty_input" type="number"
-                                            name="quantity" value="1" min="1" max="99"
-                                            data-item_id="{{ product.id }}"
-                                            id="id_qty_{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black rounded-0"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                     </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5">
+                <p class="product-title mb-0">{{ product.name }}</p>
+                <p class="mt-2 mb-2 text-left">€{{ product.price }}</p>
+                {% if product.rating %}
+                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                {% else %}
+                <small class="text-muted">No Rating</small>
+                {% endif %}
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                <a href="#deleteProduct{{ product.id }}" class="text-danger" data-toggle="modal" >Delete</a>
+                </small>
+                {% endif %}
+                <p class="mt-3">{{ product.description }}</p>
+                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12">
+                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-black rounded-0" 
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                        <span class="icon">
+                                        <i class="fas fa-minus"></i>
+                                        </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control qty_input" type="number"
+                                        name="quantity" value="1" min="1" max="99"
+                                        data-item_id="{{ product.id }}"
+                                        id="id_qty_{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-black rounded-0"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        <span class="icon">
+                                        <i class="fas fa-plus"></i>
+                                        </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn rounded-0 text-uppercase mt-5 cta-green" value="Add to Bag">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                    </form>
-                    <form class="form update-form" method="POST" action="{% url 'add_to_wishlist' product.id %}">
-                        {% csrf_token %}
+                        <div class="col-12">
+                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="btn rounded-0 text-uppercase mt-5 cta-green" value="Add to Bag">
+                        </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <button class="btn btn-outline-black rounded-0 mt-5"><i class="fas fa-heart"></i>  Add to wish list</button>
-                    </form>
-                </div>
+                    </div>
+                </form>
+                <form class="form update-form" method="POST" action="{% url 'add_to_wishlist' product.id %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    <button class="btn btn-outline-black rounded-0 mt-5"><i class="fas fa-heart"></i>  Add to wish list</button>
+                </form>
             </div>
         </div>
-    </div>>
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Reviews</h2>
-            <hr class="w-50 mb-1">
+    </div>
+</div>
+>
+<div class="row">
+    <div class="col text-center mt-3">
+        <h2 class="logo-font">Reviews</h2>
+        <hr class="w-50 mb-1">
+    </div>
+</div>
+<div class="row">
+    <div class="col text-center">
+        <a href="{% url 'add_review' product.id %}" class="btn btn-outline-black rounded-0 mt-5 mb-5"><i class="fas fa-plus"></i> Add Review</a>
+        <a class="btn cta-black rounded-0" data-toggle="collapse" href="#collapseReview" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <span>Read Reviews</span>
+        </a>
+        <div class="collapse" id="collapseReview">
+            {% if product.reviews.count > 0 %}
+            {% for review in product.reviews.all %}
+            <div class="card card-body mb-2">
+                <h5 class="card-title">{{ review.review_title }}</h5>
+                <p><small class="text-muted">{{ review.review_rating }} / 5 <i class="fas fa-star"></i></small></p>
+                <p class="card-text">{{ review.review_content }}</p>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="card card-body mb-2">
+                <h5 class="card-title">This product does not have any reviews at the moment. </h5>
+                <p class="card-text mt-2">Already purchased this Maisigh piece? Let us know what you think! :)</p>
+            </div>
+            {% endif %}
         </div>
     </div>
-        <div class="row">
-            <div class="col text-center">
-                <a href="{% url 'add_review' product.id %}" class="btn btn-outline-black rounded-0 mt-5 mb-5"><i class="fas fa-plus"></i> Add Review</a>
-                
-                    <a class="btn cta-black rounded-0" data-toggle="collapse" href="#collapseReview" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    <span>Read Reviews</span>
-                    </a>
-               
-                <div class="collapse" id="collapseReview">
-                        {% if product.reviews.count > 0 %}
-                            {% for review in product.reviews.all %}
-                            <div class="card card-body mb-2">
-                                <h5 class="card-title">{{ review.review_title }}</h5>
-                                <p><small class="text-muted">{{ review.review_rating }} / 5 <i class="fas fa-star"></i></small></p>
-                                <p class="card-text">{{ review.review_content }}</p>
-                            </div>
-                            {% endfor %}
-                        {% else %}
-                        <div class="card card-body mb-2">
-                            <h5 class="card-title">This product does not have any reviews at the moment. </h5>
-                            <p class="card-text mt-2">Already purchased this Maisigh piece? Let us know what you think! :)</p>
-                    </div>
-                        {% endif %}
-                </div>
+</div>
+<!-- Delete Modal --->
+<div class="modal fade text-center" id="deleteProduct{{ product.id }}" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="deleteProduct{{ product.id }}Label">
+                    Are you sure you want to delete <br>" {{ product.name }} " ? <br>
+                </h5>
+                <p>You will not be able to undo this action.</p>
+            </div>
+            <div class="modal-footer modal-btns">
+                <button type="button" class="btn text-uppercase cta-black" data-dismiss="modal">Cancel</button>
+                <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger rounded-0 text-uppercase">
+                <span>Delete</span>                      
+                </a>
             </div>
         </div>
-        <!-- Delete Modal --->
-        <div class="modal fade text-center" id="deleteProduct{{ product.id }}" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h5 class="modal-title" id="deleteProduct{{ product.id }}Label">
-                            Are you sure you want to delete <br>" {{ product.name }} " ? <br>
-                        </h5>
-                        <p>You will not be able to undo this action.</p>
-                    </div>              
-                    <div class="modal-footer modal-btns">
-                        <button type="button" class="btn text-uppercase cta-black" data-dismiss="modal">Cancel</button>
-                        <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger rounded-0 text-uppercase">
-                            <span>Delete</span>                      
-                        </a>
-                    </div>
-                </div>
-            </div> 
-        </div>
     </div>
+</div>
+</div>
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}

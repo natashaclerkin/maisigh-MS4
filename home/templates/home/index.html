@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
 {% endblock %}
-
 {% block content %}
 <!-- START OF CAROUSEL -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -18,8 +16,8 @@
             <div class="carousel-caption d-none d-lg-block text-center">
                 <h1>SUSTAINABLE IRISH JEWELLERY</h1>
                 <div class="homecta"><a class="btn cta-black rounded-0" href="{% url 'about' %}" role="button">LEARN
-                        MORE
-                        ABOUT MAISIGH</a>
+                    MORE
+                    ABOUT MAISIGH</a>
                 </div>
             </div>
         </div>
@@ -28,7 +26,7 @@
             <div class="carousel-caption d-none d-lg-block text-center">
                 <h1>GET INSPIRED</h1>
                 <div class="homecta"><a class="btn cta-black rounded-0" href="{% url 'products' %}" role="button">SHOP OUR
-                        COLLECTION</a>
+                    COLLECTION</a>
                 </div>
             </div>
         </div>
@@ -37,24 +35,21 @@
             <div class="carousel-caption d-none d-lg-block text-center">
                 <h1>SNAP & SHARE</h1>
                 <div class="homecta"><a class="btn cta-black rounded-0" href="{% url 'blogs' %}" role="button">TAG US IN YOUR MAISIGH ORDER
-                        FOR FREEBIES</a>
+                    FOR FREEBIES</a>
                 </div>
             </div>
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
     </a>
 </div>
 <!-- END OF CAROUSEL -->
-
-
-
 <!-- TRENDING-->
 <div class="container-fluid">
     <div class="row">
@@ -63,52 +58,37 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
-
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
-            {% for product in products %}
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="card h-100 border-0">
-                    {% if product.image %}
-                    <a href="{% url 'product_detail' product.id %}">
+                {% for product in products %}
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
-                    {% else %}
-                    <a href="{% url 'product_detail' product.id %}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
-                    </a>
-                    {% endif %}
-                    <div class="card-body text-center pb-0">
-                        <p class="mb-0">{{ product.name }}</p>
-                    </div>
-                    <div class="card-footer bg-white pt-0 border-0 text-center">
-                        <div class="row">
-                            <div class="col">
-                                <p class="mb-0 text-center mt-2">€{{ product.price }}</p>
+                        </a>
+                        {% endif %}
+                        <div class="card-body text-center pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="mb-0 text-center mt-2">€{{ product.price }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
+            <hr>
         </div>
- 
-    <!-- Browse all button 
-    <div class="row">
-        <div class="col text-transform text-center mt-3">
-            <a href="{% url 'products' %}" class="btn btn-dark">Browse the collection</a>
-        </div>
-    </div-->
-    <hr>
+    </div>
 </div>
-</div>
-</div>
-
-
-
-
-
-
-
 {% endblock %}

@@ -1,23 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
-
 {% block content %}
 <div class="section-top">
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="text-uppercase">
-               404 - Page Not Found
+                404 - Page Not Found
             </h1>
             <p class="mt-5">
-               Aw no! We can't seem to find the page you're looking for :(
+                Aw no! We can't seem to find the page you're looking for :(
             </p>
             <a href="{% url 'home' %}" class="btn cta-black mt-5 text-uppercase" aria-label="Back home button"> <i class="fas fa-chevron-left mr-1"></i> Take me back to the style </a>
         </div>

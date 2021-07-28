@@ -1,18 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
-
-
 {% block content %}
 <div class="overlay"></div>
-
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
@@ -20,7 +16,6 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
-
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
@@ -28,26 +23,26 @@
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector"
                             class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
-                            </option>
-                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
-                                (low to
-                                high)</option>
-                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
-                                (high
-                                to low)</option>
-                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>
-                                Rating (low
-                                to high)</option>
-                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>
-                                Rating
-                                (high to low)</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
-                                (A-Z)
-                            </option>
-                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
-                                (Z-A)
-                            </option>
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                        </option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
+                        (low to
+                        high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                        (high
+                        to low)</option>
+                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>
+                        Rating (low
+                        to high)</option>
+                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>
+                        Rating
+                        (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
+                        (A-Z)
+                        </option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
+                        (Z-A)
+                        </option>
                         </select>
                     </div>
                 </div>
@@ -65,7 +60,7 @@
                         <!-- search query breadcrumb -->
                         {% elif search_term %}
                         <span class="active-breadcrumb">Results for "{{ search_term|truncatechars:25 }}"
-                            ({{ products|length}})</span>
+                        ({{ products|length}})</span>
                         <!-- product tag breadcrumb -->
                         {% elif product_tag %}
                         <span class="active-breadcrumb">{{ product_tag }} products ({{ products|length}})</span>
@@ -75,20 +70,18 @@
                     </p>
                 </div>
             </div>
-
-
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
-                                alt="{{ product.name }}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
+                            alt="{{ product.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body text-center pb-0">
@@ -100,8 +93,8 @@
                                     <p class="mt-2 text-center">€{{ product.price }}</p>
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3 text-success">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                        <a href="#deleteProduct{{ product.id }}" class="text-danger" data-toggle="modal" >Delete</a>
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                    <a href="#deleteProduct{{ product.id }}" class="text-danger" data-toggle="modal" >Delete</a>
                                     </small>
                                     {% endif %}
                                 </div>
@@ -135,40 +128,33 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                                 </button>
                                 <h5 class="modal-title" id="deleteProduct{{ product.id }}Label">
                                     Are you sure you want to delete <br>" {{ product.name }} " ? <br>
                                 </h5>
                                 <p>You will not be able to undo this action.</p>
-                            </div>              
+                            </div>
                             <div class="modal-footer modal-btns">
                                 <button type="button" class="btn text-uppercase cta-black" data-dismiss="modal">Cancel</button>
                                 <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger rounded-0 text-uppercase">
-                                    <span>Delete</span>                      
+                                <span>Delete</span>                      
                                 </a>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </div>
 </div>
-
-
-
 <div class="btt-button shadow-sm rounded-0 border border-black">
     <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
     </a>
 </div>
-
 {% endblock %}
-
-
-
 {% block postloadjs %}
 {{ block.super }}
 <!-- Back to top functionality -->
@@ -182,23 +168,22 @@
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
-
+    
         var selectedVal = selector.val();
         if (selectedVal != "reset") {
             var sort = selectedVal.split("_")[0];
             var direction = selectedVal.split("_")[1];
-
+    
             currentUrl.searchParams.set("sort", sort);
             currentUrl.searchParams.set("direction", direction);
-
+    
             window.location.replace(currentUrl);
         } else {
             currentUrl.searchParams.delete("sort");
             currentUrl.searchParams.delete("direction");
-
+    
             window.location.replace(currentUrl);
         }
     })
 </script>
-
 {% endblock %}
