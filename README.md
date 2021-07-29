@@ -96,7 +96,6 @@ As a business/admin user, I would like to have access to all of the above as wel
 - Offer a discount to customers so that I can gain repeat customers for the brand. 
 - View analytics/reports for the checkout process so that I can highlight and fix any potential cart abandonment issues relating to the design and make necessary improvements.  
 
-![Empty Bag](https://res.cloudinary.com/nclerkin/image/upload/v1627576112/emptybag_xbw37u.png "Empty Shopping Bag Message") 
 
 ## Design
 
@@ -127,6 +126,7 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 
 # Features
 ![Wishlist](https://res.cloudinary.com/nclerkin/image/upload/v1627190831/fix-6.2_nowqyc.png "Wishlist")
+![Empty Bag](https://res.cloudinary.com/nclerkin/image/upload/v1627576112/emptybag_xbw37u.png "Empty Shopping Bag Message") 
 
 ## Existing Features
 - A clean, simplistic responsive website.
@@ -180,9 +180,9 @@ I chose to work with Django's default database **SQLite3** in the development of
 ## Data Modeling
 I used Django Allauth and its default `django.contrib.auth.models` for the **User model** in the profile app.
 
-### Profile app
+### Profile App
 
-#### User Profile model
+#### User Profile Model
 
 | Name             | Database Key         | Field Type           | Validation                                          |
 | ---------------- | -------------------- | -------------------- | --------------------------------------------------- |
@@ -196,16 +196,16 @@ I used Django Allauth and its default `django.contrib.auth.models` for the **Use
 | Postcode         | default_postcode     | models.CharField     | max_length=20, default='', blank=True               |
 | Country          | default_country      | models.CharField     | blank_label='Select Country', null=True, blank=True |
 
-### Products app
+### Products App
 
-#### Category model
+#### Category Model
 
 | Name          | Database Key  | Field Type | Validation                             |
 | ------------- | ------------- | ---------- | -------------------------------------- |
 | Name          | name          | CharField  | max_length=254                         |
 | Friendly Name | friendly_name | CharField  | max_length=254, default='', blank=True |
 
-#### Product model
+#### Product Model
 
 | Name        | Database Key | Field Type          | Validation                                                    |
 | ----------- | ------------ | ------------------- | ------------------------------------------------------------- |
@@ -218,9 +218,9 @@ I used Django Allauth and its default `django.contrib.auth.models` for the **Use
 | Image       | image        | models.ImageField   | default='', blank=True                                        |
 | Image URL   | image_url    | models.URLField     | max_length=1024, default='', blank=True                       |
 
-### Checkout app
+### Checkout App
 
-#### Order model
+#### Order Model
 
 | Name                     | Database Key    | Field Type           | Validation                                                                          |
 | ------------------------ | --------------- | -------------------- | ----------------------------------------------------------------------------------- |
@@ -242,7 +242,7 @@ I used Django Allauth and its default `django.contrib.auth.models` for the **Use
 | Original Bag             | original_bag    | models.TextField     | null=False, blank=False, default=''                                                 |
 | Stripe Payment Intent ID | stripe_pid      | models.CharField     | max_length=254, null=False, blank=False, default=''                                 |
 
-#### Order Line Item model
+#### Order Line Item Model
 
 | Name            | Database Key   | Field Type          | Validation                                                                         |
 | --------------- | -------------- | ------------------- | ---------------------------------------------------------------------------------- |
@@ -251,9 +251,9 @@ I used Django Allauth and its default `django.contrib.auth.models` for the **Use
 | Quantity        | quantity       | models.IntegerField | null=False, blank=False, default=0                                                 |
 | Line Item Total | lineitem_total | models.DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False            |
 
-### Blog app
+### Blog App
 
-#### Blog Post model
+#### Blog Post Model
 
 | Name         | Database Key | Field Type           | Validation                                                 |
 | ------------ | ------------ | -------------------- | ---------------------------------------------------------- |
@@ -267,9 +267,9 @@ I used Django Allauth and its default `django.contrib.auth.models` for the **Use
 | Image URL    | image_url    | models.URLField      | max_length=1024, default='', blank=True                    |
 | Status       | status       | models.IntegerField  | choices=STATUS, default=0                                  |
 
-### Reviews app
+### Reviews App
 
-#### Product Review model
+#### Product Review Model
 
 | Name         | Database Key   | Field Type           | Validation                                                                                |
 | ------------ | -------------- | -------------------- | ----------------------------------------------------------------------------------------- |
@@ -280,9 +280,9 @@ I used Django Allauth and its default `django.contrib.auth.models` for the **Use
 | Title        | review_title   | models.CharField     | max_length=254                                                                            |
 | Content      | review_content | models.TextField     | max_length=1000, null=False, blank=False, default=''                                      |
 
-### Wishlist app
+### Wishlist App
 
-#### Wishlist model
+#### Wishlist Model
 
 | Name         | Database Key   | Field Type           | Validation                                                                                |
 | ------------ | -------------- | -------------------- | ----------------------------------------------------------------------------------------- |
@@ -290,7 +290,7 @@ I used Django Allauth and its default `django.contrib.auth.models` for the **Use
 | Products     | products       | ManyToManyField      | Product, default="", through='WishlistItem'                                               |
 
 
-#### Wishlist Item model
+#### Wishlist Item Model
 
 | Name         | Database Key   | Field Type           | Validation                                                                                  |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------------------------------------- |
