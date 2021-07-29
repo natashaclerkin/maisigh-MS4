@@ -14,7 +14,7 @@
 3. [Manual Testing](#manual-testing) 
 4. [Bugs](#bugs) 
  
-[< Take me back to the README file](README.md "README.md File") 
+[< Back to the README file](README.md "README.md File") 
 # Responsive Testing 
  
 Responsiveness of the site is tested with [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools). 
@@ -50,7 +50,7 @@ Flake8 was used to check for any errors in the Python code and refactored when r
  
 I constantly tested the code in [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) and often ran Lighthouse audits to identify and fix issues that affected the site's performance, accessibility and user experience and all results consistently scored between 90-100%. 
 
-  ![Lighthouse testing](https://res.cloudinary.com/nclerkin/image/upload/v1627145570/lighthouse_cqwd3u.png " Lighthouse testing Results") 
+![Lighthouse testing](https://res.cloudinary.com/nclerkin/image/upload/v1627145570/lighthouse_cqwd3u.png " Lighthouse testing Results") 
  
  
 [^ Back To Top ](#contents)  
@@ -61,7 +61,7 @@ I constantly tested the code in [Chrome Dev Tools](https://developers.google.com
 | USER | USER STORY TEST | OUTCOME | STATUS | 
 | ----------| -------------------- | --------------------| ----------| 
 | New User | **View a visually clean and appealing homepage so that I can instantly understand the purpose of the site and navigate its offering easily.** | As a new user, when I click the URL, I land on The homepage to view a clean, sleek website with a monochrome design and the main focus on the colourful imagery and bold CTA's. The sticky navbar is constantly on screen for ease of navigation and allows me to select 'Collection' or select a jewellery category, search for a product, login/register and a bag icon with a price to indicate where future items would be placed. A delivery banner informs me that if I spend over €50 I will get free delivery. There's also a carousel with three images, three titles and three CTAs. The first slide displays a title reading ‘Irish Sustainable Jewellery so I am instantly aware of the site's purpose.Towards the bottom of the homepage, there is a banner that shows the brand's USP. There is also a trending section and a footer with secondary nav links such as socials, blog section, 'about us' and 'contact us. | Approved | 
-| New User | **Access the site from any mobile, tablet or desktop device so that I can have an equally enjoyable experience regardless of the selected device/platform.** | As a new user, when I attempt to navigate the site on multiple devices, I am greeted with a responsive website on all tested devices. | Approved | 
+| New User | **Access the site from any mobile, tablet or desktop device so that I can have an equally enjoyable experience regardless of the selected device.** | As a new user, when I attempt to navigate the site on multiple devices, I am greeted with a responsive website on all tested devices. | Approved | 
 | New User | **View content without requiring to register so that I can quickly locate a specific jewellery piece**  |   As a new non-authenticated user, I can select 'Collection' from the nav and I can search jewellery by name and short description content.      |   Approved        |
 | New User | **Browse and filter jewellery by product type, rating, name or price so that I can easily find inspiration for a jewellery piece.**  |   As a new user, I click filtered jewellery categories from the Nav to view a selection of relevant jewellery pieces and I can view all jewellery from the Collection link in the navbar.      |   Approved        |
 | New User | **View a list of items by product type/name/details keyword search criteria so that I can quickly locate a specific jewellery piece.**  |     As a new user, I can access the search bar in the nav which brings me to all relevant search results based on the entered keyword and I have the ability to search jewellery by name and description content.     |   Approved        |
@@ -75,7 +75,6 @@ I constantly tested the code in [Chrome Dev Tools](https://developers.google.com
 | Returning User | **Save a wish list of desired products to my account so that I can possibly purchase the item in the future when I can afford the item.**  |   As a returning registered user, I can view any item and add it to the wish list. A toast pops up with confirmation that it has been added to the wish list which can be viewed from My Account. To view the actual wish list I can access it from the navbar and can review the items I have added. If I haven't added anything to my wish list there's a CTA to bring me back to view the collection. |   Approved     |
 | Returning User | **Have the ability to contact the company so that I can ask a question regarding a product or purchase.**  |   As a returning user, I can select the 'contact us' link which brings me to a form where I can enter my information and query. When I submit the query, I am presented with a toast that confirms my message has been received and a member of the company will get back to me.  |   Approved  |
 | Returning User | **Receive discounts on future orders so that I am incentivised to remain loyal to the brand.**  |   As a returning user who has placed an order, once I view my order confirmation, I see a CTA which invites me to review the order once received or share the order online in order to receive a discount on the next order. This links to the blog and an article about this process.   |   Approved       |
-| Returning User | **Receive discounts on future orders so that I am incentivised to remain loyal to the brand.**  |   As a returning user who has placed an order, once I view my order confirmation, I see a CTA which invites me to review the order once received or share the order online in order to receive a discount on the next order. This links to the blog and an article about this process.   |   Approved       |
 | Business/Admin User | **The ability to view, add, edit or remove product categories so that I can keep the categories relevant to what users are searching for.**  |   As a logged-in Admin user, I can select 'manage categories' which brings me to the admin portal where I can view the current categories that are present on the site and I have options available to edit or delete these categories as well as the option to create a new category.  |   Approved       |
 | Business/Admin User | **The ability to view, add, edit or remove products so that I can review and reflect the current stock levels and product information.**  |   As a logged-in Admin user, I can view all products from the live locations on the site and admin portal. As well as being able to view the current products and descriptions as regular users, I have access to 'edit' and 'delete' links. I have full functionality to edit or delete the product and I am presented with a confirmation modal before deleting a product. I can also add new products from the nav or from the admin portal. Toast messaging confirms site actions taken.  |   Approved       |
 | Business/Admin User | **The ability to view, add, edit or remove blog articles so that I can keep the content relevant to the customer's interests that they will enjoy.**  |   As a logged-in Admin user, I can view all blog articles from the live locations on the site and admin portal. As well as being able to view the current posts as regular users, I have access to 'edit' and 'delete' links. I have full functionality to edit or delete the post and I am presented with a confirmation modal prior to deleting an article. I can also add new articles from the nav or from the admin portal. Toast messaging confirms site actions taken.  |   Approved       |
@@ -84,6 +83,8 @@ I constantly tested the code in [Chrome Dev Tools](https://developers.google.com
 | Business/Admin User | **Offer a discount to customers so that I can gain repeat customers for the brand.**  |   As an Admin/Business user, I can see on the carousel there is a link to the blog which includes a post about reviewing an order or tagging the brand in an order on social media to obtain a discount on the next purchase. The social media tags will drive business from social media to the site and the reviews will drive business from one product to another. |   Approved       |
 | Business/Admin User | **View analytics/reports for the checkout process so that I can highlight and fix any potential cart abandonment issues relating to the design and make necessary improvements.**  |   To be implemented in a future release  |    Not Approved     |
 
+![Manual testing](https://res.cloudinary.com/nclerkin/image/upload/v1627576112/contact1_pagpij.png "Contact us form") 
+![Manual testing](https://res.cloudinary.com/nclerkin/image/upload/v1627576113/contact_blkjbb.png "Query received") 
 
 ## Manual Feature Testing 
 
@@ -101,7 +102,7 @@ I constantly tested the code in [Chrome Dev Tools](https://developers.google.com
 | Footer | About Us | **Direct the user to the Maisigh About Us page.**   |    Approved     |
 | Footer |Blog| **Direct the user to the Blog articles.**   |    Approved     |
 | Homepage |Carousel| **Three images present. On desktop devices, the title and CTAs are present. The 'Learn more about Maisigh' CTA should direct the user to the 'About Us' page. The 'Browse our collection' CTA should direct the user to the main collection products page. The 'Tag us in your Maisigh orders for freebies' CTA should divert the user to the Blog.**   |    Approved     |
-| Products | Collection & Category Pages | **All images are links and should divert users to their corresponding detail page. Sorting selector allows the user to sort the products alphabetically, by price, or rating**|    Approved     |
+| Products | Collection & Category Pages | **All images are links and should divert users to their corresponding detail page. Sorting selector allows the user to sort the products name, by price, or rating**|    Approved     |
 | Products | Collection & Category Pages for superusers | **As well as the above, superusers should be able to edit or delete the specific product and should either divert them to the edit page or the deletion model respectively**|    Approved     |
 | Products | Individual Product Pages | **All pages on all devices should display the name, image, price, rating score, description, correct breadcrumb naming, 'keep shopping CTA'. 'add to bag CTA', 'add to wishlist CTA',  quantity selectors with the minus selector disabled if no products have been added, reviews section with 'add review CTA' and 'read review CTA'. All CTAs direct the user to the relevant landing page.**|    Approved     |
 | Products | Individual Product Pages for superusers | **As well as the above, superusers should be able to edit or delete the specific product and should either divert them to the edit page or the deletion model respectively. The cancel button in the model closes it keeping the user on the same page. The delete button removes the product from the database.**|    Approved     |
@@ -116,6 +117,8 @@ I constantly tested the code in [Chrome Dev Tools](https://developers.google.com
 | Products | Individual Blog Posts | **All pages on all devices should display the same image from the blog page. There should be blog content and the time and user info who created the post.**|    Approved     |
 | Products | Individual Blog Posts for superusers | **As well as the above, superusers should be able to edit or delete the specific post and should either divert them to the edit page or the deletion model respectively. The cancel button in the model closes it keeping the user on the same page. The delete button removes the product from the database.**|    Approved     |
 
+![Manual testing](https://res.cloudinary.com/nclerkin/image/upload/v1627576112/confemail_mtqjpk.png "Confirmation Page") 
+![Manual testing](https://res.cloudinary.com/nclerkin/image/upload/v1627576112/confemail-gmail_uixfat.png "Confirmation Email") 
 
 [^ Back To Top ](#contents) 
 
@@ -157,4 +160,4 @@ However, I did run into issues with the following:
 
 [^ Back To Top ](#contents) 
 
-[< Take me back to the README file](README.md "README.md File")
+[< Back to the README file](README.md "README.md File")

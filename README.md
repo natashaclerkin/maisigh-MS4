@@ -1,7 +1,7 @@
 # Maisigh.ie
 
 ## Code Institute MS4 Project in Full Stack Frameworks
-The brief was to build a full-stack site based around business logic used to control a centrally-owned dataset. The requirements included the set up of an authentication mechanism and to provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
+The brief was to build a full-stack site based around business logic used to control a centrally-owned dataset. The requirements included the set up of an authentication mechanism and other activities based on the dataset, such as the purchase of a product/service.
 
 # Contents
 
@@ -27,11 +27,11 @@ The brief was to build a full-stack site based around business logic used to con
  
 [Maisigh.ie](http://maisigh-ms4.herokuapp.com) is an Ecommerce site that allows users to locate sustainable, Irish jewellery. For any non-native Irish speakers who may be slightly confused re the website name, 'maisigh' (pronounced mosh-she) is a Gaeilge word meaning 'to decorate, to accessorise or beautify'! 
 
-Maisigh knows that simply having a good product is no longer enough to win a customer’s heart. They now want more than just quality, and demand products that align with their personal values. 
+Maisigh knows that simply having a good product is no longer enough to win a customer’s heart. Customers now want more than just quality, and demand products that align with their personal values. 
 In the face of climate change, those of us who care enough are already considering the consequences of our shopping habits. Enter Maisigh. Maisigh is fully committed to providing Irish handcrafted jewellery with minimal impact on the environment. The brand celebrates all things Irish by naming each hand-crafted piece after our own homegrown landmarks and attractions. Customers will adore the selection of fashion-forward, ethically sourced Irish products that they will fall in love with. 
 
 My own goals as a developer creating this project were to: 
-- Develop a Ecommerce platform that enables the commercial process of buying and selling online. For customers, this would involve a search feature that allows users to locate desired products, a cart feature that lets them manage their order and a payment feature that allow them to purchase their items securely. For employees, this would allow admin users to add, update and delete product and blog content when required. 
+- Develop an Ecommerce platform that enables the commercial process of buying and selling online. For customers, this would involve a search feature that allows users to locate desired products, a cart feature that lets them manage their order and a payment feature that allow them to purchase their items securely. For employees, this would allow admin users to add, update and delete product and blog content when required. 
 - Create an app that is highly accessible, responsive and simplistic in design.
 - Create the backend code and frontend forms allowing admin users to carry out CRUD operations.
 - Create the backend and frontend functionality for users to locate products based on the item's fields providing full search functionality on the site.
@@ -47,12 +47,12 @@ My own goals as a developer creating this project were to:
 ### External user’s goal:
 
 - Purchase desired items by a secure means.
-- Easily find inspiration for an accessory or locate a specific jewellery piece based on type, price, alphabetically, rating or from a personal wish list. 
+- Easily find inspiration for an accessory or locate a specific jewellery piece based on type, price, name, rating or from a personal wish list. 
 - Share desired items or purchases with social following or with friends directly.
 - Have an enjoyable experience on the primary visit as well as future visits.
 
 
-### Site owner's goal:
+### Site owner/Admin's goal:
 - Provide a professional, accessible and secure ecommerce site where users can find desired items.
 - Promote handcrafted, fashionable and sustainable Irish jewellery online.
 - Earn profit by making a selection of handcrafted, sustainable Irish jewellery available to users. 
@@ -66,7 +66,7 @@ My own goals as a developer creating this project were to:
 
 As a new user, I would like to:
 - View a visually clean and appealing homepage so that I can instantly understand the purpose of the site and navigate its offering easily.
-- Access the site from any mobile, tablet or desktop device so that I can have an equally enjoyable experience regardless of the selected device/platform.
+- Access the site from any mobile, tablet or desktop device so that I can have an equally enjoyable experience regardless of the selected device.
 - View content without the requirement to register so that I can quickly locate a specific jewellery piece.
 - Browse and filter jewellery by product type, rating, name or price so that I can easily find inspiration for a jewellery piece.
 - View a list of items by product type/name/details keyword search criteria so that I can quickly locate a specific jewellery piece.
@@ -96,10 +96,11 @@ As a business/admin user, I would like to have access to all of the above as wel
 - Offer a discount to customers so that I can gain repeat customers for the brand. 
 - View analytics/reports for the checkout process so that I can highlight and fix any potential cart abandonment issues relating to the design and make necessary improvements.  
 
+![Empty Bag](https://res.cloudinary.com/nclerkin/image/upload/v1627576112/emptybag_xbw37u.png "Empty Shopping Bag Message") 
 
 ## Design
 
-![IMAGE](https://res.cloudinary.com/nclerkin/image/upload/v1627190869/banner.2PNG_fg3oiw.png "IMAGE")
+![Homepage](https://res.cloudinary.com/nclerkin/image/upload/v1627190869/banner.2PNG_fg3oiw.png "Homepage")
 
 ### Typography
 I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about) for the headings and [Open Sans](https://fonts.google.com/specimen/Open+Sans/#about) as a supporting body font to achieve the desired clean-cut, fashion-forward brand image.
@@ -108,7 +109,7 @@ I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about)
 Font Awesome icons have been used for this project.
 
 ### Color Scheme
-The Maisigh brand monochrome colour scheme was implemented along with pops of natural fashion blush, sea blue and sage green to reflect the Irish and environmentally-friendly green products represented throughout the site. The primary CTA's green and blank and the secondary CTA's are black and white. When the user hovers over the CTAs the colours are inverted to indicate the action they are about to take.
+The Maisigh brand monochrome colour scheme was implemented along with pops of natural fashion blush, sea blue and sage green to reflect the Irish and environmentally-friendly green products represented throughout the site. The primary CTA's green and black and the secondary CTA's are black and white. When the user hovers over the CTAs the colours are inverted to indicate the action they are about to take.
 I wanted to keep the colour palette simplistic and clean to allow for the imagery from the jewellery to stand out and inject the site with colour.
 However, the colour red is used for error messages or promotion content sitewide to captivate the user's attention.
 
@@ -125,9 +126,7 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 [^ Back To Top ](#contents)
 
 # Features
-![IMAGE](https://res.cloudinary.com/nclerkin/image/upload/v1627190831/fix-6.2_nowqyc.png "IMAGE")
-# Features
-
+![Wishlist](https://res.cloudinary.com/nclerkin/image/upload/v1627190831/fix-6.2_nowqyc.png "Wishlist")
 
 ## Existing Features
 - A clean, simplistic responsive website.
@@ -137,7 +136,7 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 - Carousel hitting the three main user stories, the 'about us' feature with the text 'sustainable Irish jewellery' with a CTA inviting users to instantly see what the website's purpose', the 'inspiration' feature which aims to entice users to browse the full collection and the third feature capturing the user's attention with the CTA displaying the action of obtaining freebies if the user helps with brand promotion.
 - ‘Trending’ section of jewellery on the homepage for inspiration.
 - Footer with blog contact us and social media links and brand footer with the main brand features.
-- Pages for ‘Collection’ and individual pre-filtered categories can be further filtered by price, rating and alphabetically.
+- Pages for ‘Collection’ and individual pre-filtered categories can be further filtered by price, rating and name.
 - Search functionality that pulls from the data in the product description and name.
 - Individual product page containing a short description with relevant product information, image, price, rating, quantity selector, add to wishlist CTA, option for users to leave a review for a product or read reviews that have been left by past customers. The user can click a button to reveal a dropdown of reviews. If there is more than one review, a stack of cards are displayed alternatively if no reviews are provided an individual card confirms that there are currently no reviews for the product and prompts the user to leave a review if they have purchased the product already. To add a review, the 'Add Review' CTA is available which directs the user to form submission. 
 - Shopping bag page that lists all items the user has added. The grid displays the name of the product, image, SKU number, quantity and the increment and decrement buttons and an update and delete link to allow the user to update their order easily. The bag subtotal, delivery charge and total is provided at the end of the page. If the user is close to the threshold for free delivery they will be prompted with the amount left to spend if they wish to avail of free delivery.
@@ -153,6 +152,7 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 - A placeholder default image as a temporary fix if a product image isn't readily available.
 - Admin user has access to all products and can edit or remove them, they also have access to manage categories, reviews, orders and blog articles as well as edit them, remove them or add new ones. As well as in the admin portal, the edit/delete links are offered in each product card for ease of management.
 
+![404](https://res.cloudinary.com/nclerkin/image/upload/v1627576112/404fix_fvu7st.png "404 Custom Page") 
 
 ## Features Left to Implement
 - Maisigh newsletter sign up form to update users of new products and possible discounts.
@@ -166,6 +166,7 @@ This folder contains [wireframes](static/wireframes.pdf "Maisigh Wireframes") in
 - Ability to add additional photos to the product page and implement a zoom feature so the user can see closer detail.
 - Cross-selling products that are often purchased together and the ability for admin to change these products as required.
 - Allow email alerts to ping users of wishlist items when the item has returned in stock, running low in stock or has been recently discounted to allure the user back to the site.
+- Share buttons on each product page to allow users to share on their social media
 
 
 [^ Back To Top ](#contents)
@@ -179,11 +180,9 @@ I chose to work with Django's default database **SQLite3** in the development of
 ## Data Modeling
 I used Django Allauth and its default `django.contrib.auth.models` for the **User model** in the profile app.
 
-The Product and Checkout apps are structured on the CI walkthrough project, Boutique Ado.
-
 ### Profile app
 
-#### UserProfile model
+#### User Profile model
 
 | Name             | Database Key         | Field Type           | Validation                                          |
 | ---------------- | -------------------- | -------------------- | --------------------------------------------------- |
@@ -237,9 +236,10 @@ The Product and Checkout apps are structured on the CI walkthrough project, Bout
 | Street Address 2         | street_address2 | models.CharField     | max_length=80, null=False, blank=False                                              |
 | County                   | county          | models.CharField     | max_length=80, default='', blank=True                                               |
 | Date                     | date            | models.DateTimeField | auto_now_add=True                                                                   |
+| Delivery Cost            | delivery_cost   | models.DecimalField  | max_digits=6, decimal_places=2, null=False, default=0                               |
 | Order Total              | order_total     | models.DecimalField  | max_digits=10, decimal_places=2, null=False, default=0                              |
 | Grand Total              | grand_total     | models.DecimalField  | max_digits=10, decimal_places=2, null=False, default=0                              |
-| Original Basket          | original_basket | models.TextField     | null=False, blank=False, default=''                                                 |
+| Original Bag             | original_bag    | models.TextField     | null=False, blank=False, default=''                                                 |
 | Stripe Payment Intent ID | stripe_pid      | models.CharField     | max_length=254, null=False, blank=False, default=''                                 |
 
 #### Order Line Item model
@@ -248,13 +248,12 @@ The Product and Checkout apps are structured on the CI walkthrough project, Bout
 | --------------- | -------------- | ------------------- | ---------------------------------------------------------------------------------- |
 | Order           | order          | models.ForeignKey   | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
 | Product         | product        | models.ForeignKey   | Product, null=False, blank=False, on_delete=models.CASCADE                         |
-| Product Size    | product_size   | models.CharField    | max_length=2, default='', blank=True                                               |
 | Quantity        | quantity       | models.IntegerField | null=False, blank=False, default=0                                                 |
 | Line Item Total | lineitem_total | models.DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False            |
 
 ### Blog app
 
-#### BlogPost model
+#### Blog Post model
 
 | Name         | Database Key | Field Type           | Validation                                                 |
 | ------------ | ------------ | -------------------- | ---------------------------------------------------------- |
@@ -270,7 +269,7 @@ The Product and Checkout apps are structured on the CI walkthrough project, Bout
 
 ### Reviews app
 
-#### Product Review
+#### Product Review model
 
 | Name         | Database Key   | Field Type           | Validation                                                                                |
 | ------------ | -------------- | -------------------- | ----------------------------------------------------------------------------------------- |
@@ -281,8 +280,26 @@ The Product and Checkout apps are structured on the CI walkthrough project, Bout
 | Title        | review_title   | models.CharField     | max_length=254                                                                            |
 | Content      | review_content | models.TextField     | max_length=1000, null=False, blank=False, default=''                                      |
 
+### Wishlist app
 
-CONTINUE 
+#### Wishlist model
+
+| Name         | Database Key   | Field Type           | Validation                                                                                |
+| ------------ | -------------- | -------------------- | ----------------------------------------------------------------------------------------- |
+| User         | user           | OneToOneField 'User' | UserProfile, null=False, blank=False, on_delete=models.CASCADE, related_name='wishlist'   |
+| Products     | products       | ManyToManyField      | Product, default="", through='WishlistItem'                                               |
+
+
+#### Wishlist Item model
+
+| Name         | Database Key   | Field Type           | Validation                                                                                  |
+| ------------ | -------------- | -------------------- | ------------------------------------------------------------------------------------------- |
+| Wishlist     | Wishlist       | models.ForeignKey    | Wishlist, null=False, blank=False, on_delete=models.CASCADE, related_name='wishlist_items'  |
+| Product      | product        | models.ForeignKey    | Product, null=False, blank=False, on_delete=models.CASCADE,related_name='wishlist_products' |
+| Date added   | date_added     | models.DateTimeField | auto_now_add=True                                                                           |
+
+
+
 [^ Back To Top ](#contents)
 
 # Technologies Used
